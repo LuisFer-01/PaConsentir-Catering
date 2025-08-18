@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B3889C5E-002B-523B-E52C-172B4A6A2E25" name="users">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>A9849482-770B-3BB2-89C5-459BF5A7DE86</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="DC752090-EB1C-EA67-E43B-28854585D30F">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>2D961755-61D5-8649-D933-2DE27BCAC859</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="E4F2E931-39B8-888F-7F64-692256C97E7D">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>8C6E7DEF-0C04-725B-6E93-184B615AAA85</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AD174566-9F45-C669-F692-B6D5C521FE5B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="604BF3B8-0CC2-BB34-0159-F9E8D29FA5CC">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>1635DB22-C5F3-BA7E-232D-8BCA71574F07</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AD174566-9F45-C669-F692-B6D5C521FE5B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_verified_at" id="2357F25A-83C2-4991-E969-DDDC946B1451">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>68663A1F-3B74-9834-8F54-3DE92C1E843C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>1FC688F1-9271-DB22-2467-346B1EDA08D5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="CAC71584-F88B-9D21-BBC0-8E84EF1BC7A3">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>E89D1DFE-6E35-F765-4416-C59D49BA8E8D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AD174566-9F45-C669-F692-B6D5C521FE5B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="remember_token" id="3C625B5B-CDF8-5490-1921-9E83BF4FDDCE">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>E3221C7E-24A0-CFF1-114A-A1F0EC9D73B1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2834ED5F-BA96-567F-73E6-6D7D08F83614</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="23C230DA-CB83-57BE-E29F-61D165E1949B">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>299844D4-9EF0-81AD-603E-C02FE07A4B94</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="FEE591BA-622C-9684-7DB4-5ECF8C628CC7">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>ABCCEAEE-CD6B-D5C0-50B3-6AB344BABBA2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8918AF8B-21DD-3FE0-73B6-A7D1A51FB48A" name="users__IDX">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>DD7EC1E5-27FC-037F-EF93-817A01E1C7D1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC752090-EB1C-EA67-E43B-28854585D30F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45792531-DCD9-5996-8C0E-A4EA2C92404A" name="users__IDXv1">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>F557FC01-D566-B0F5-D6E4-3A358ABC52E4</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="604BF3B8-0CC2-BB34-0159-F9E8D29FA5CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

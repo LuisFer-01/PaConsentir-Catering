@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="141A8923-011D-04C3-092F-CF14AEEDE41E" name="detalle_compras">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:02 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>0AC5806F-8297-328C-A6BC-8BF440C8E88C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7F695564-C78C-22D0-352B-F822AFC765D7">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>1A06DAF8-BD07-396D-1F58-43BAB6496456</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="compra_id" id="D5BEBDB5-8B8D-D184-9F4D-3D342BD71917">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>EABB659E-D098-72B6-ACAD-1F53785E26CA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="945A593E-B220-F701-E282-EF72956C6213" referredColumn="338DFC43-1AEF-390A-8F5F-A5C2D9CF4C50"/>
+</associations>
+</Column>
+<Column name="insumo_id" id="327C21E9-1E5D-A945-28BE-6DF9514C0538">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>575A6CE0-6201-DF0A-3C3F-DD9A79171870</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78829FDD-1DA8-5CA9-6803-12BD0007208E" referredColumn="46277393-9EA1-D6EF-CDCF-4A56581D0429"/>
+</associations>
+</Column>
+<Column name="cantidad" id="0A25D1BA-388B-F7FD-5266-3346E2C8D570">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>89A2D6B0-2C60-2B1B-C3F8-0C5D1353B2AE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B3DA3A0A-224A-1FB5-0127-73EC361FFCE8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio_unitario" id="DD859DF4-B1AB-526D-2B76-77DDFF99F646">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>138411C2-01E3-D7E0-3DFE-8984E7E8742E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B3DA3A0A-224A-1FB5-0127-73EC361FFCE8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="subtotal" id="BBB1C74B-090B-083B-D27C-E6F1FEF12CC6">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>33BB5F98-3D83-F52D-40CE-246751C7AD21</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>3A065EAD-0024-3CAE-22E4-A78842C53293</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10121B79-3D07-F2E4-F8E4-5029B814598B" name="detalle_compras__IDX">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>B137FC1C-8534-FD63-4BC6-29C2560B2B55</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F695564-C78C-22D0-352B-F822AFC765D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CABE4D6D-8BC3-FA53-C6AF-5F2F111624C2" name="idx_detalle_compras_compra">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>A1F7F933-540B-0849-D3C3-D20F6FFB67B8</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5BEBDB5-8B8D-D184-9F4D-3D342BD71917"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF7C78AC-6A71-B0EA-3754-B092A015B4FA" name="log_FK0v16">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5BEBDB5-8B8D-D184-9F4D-3D342BD71917"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32AE825B-E5CA-236D-EB9E-9076C3566776" name="log_FK0v17">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="327C21E9-1E5D-A945-28BE-6DF9514C0538"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

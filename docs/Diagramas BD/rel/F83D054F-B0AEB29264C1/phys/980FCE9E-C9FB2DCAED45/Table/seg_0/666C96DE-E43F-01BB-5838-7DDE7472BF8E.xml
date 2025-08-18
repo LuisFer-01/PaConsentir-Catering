@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="productos_insumo" directorySegmentName="seg_0" id="666C96DE-E43F-01BB-5838-7DDE7472BF8E">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<database>505130BD-A69C-779B-3CDA-2FADB4EAB3F6</database>
+<schema>52D978E9-7B7D-7E42-A7EC-C2CC60E54591</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="descripcion" id="359BA0A6-B4ED-76F0-F1F1-54A6C0A57706">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="creado_en" id="3DE0E190-B8FA-C7D9-0492-4BDF04B36F25">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="id" id="46277393-9EA1-D6EF-CDCF-4A56581D0429">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="unidad_medida_id" id="46F27DA7-F484-D231-661E-EFDD572D1648">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="actualizado_en" id="4A30E36A-FC82-DE27-80FE-D456A116FB02">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<defaultValue>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="nombre" id="6B125C1A-23E8-2FD3-1DEA-4C1BCED145EA">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="stock_minimo" id="91FF903A-77C0-1266-9C0B-4918914456AA">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="precio_venta" id="B330012F-2961-F768-E720-4C731A7B8266">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="stock_actual" id="D47559E8-B70B-F152-3FBB-13F81A49FB3A">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="precio_compra" id="EE7C7740-D678-C4A1-AF6D-71C6B3ED1BEF">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="log_FK0v6" id="474CAE13-B24B-C6C2-8C1F-8341AE539740">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Pa&apos;Consentir_Scrip_01</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="productos_insumo__IDX" id="98767ECA-D988-A67E-5C3B-B24BB73ABA95">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>

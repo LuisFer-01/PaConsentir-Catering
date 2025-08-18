@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B54A1BB5-EF14-2718-FC87-ECA1B788927F" name="imagenes_platos">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:02 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>6932DF0F-D03E-066D-E531-A335A6C70218</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B1E63FF7-EBE5-3EDD-BF13-EB1437727A11">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>AFCD277B-EC9E-E248-3CDD-A5148EB98B35</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plato_id" id="26FAD9B9-FE47-3C41-8B88-035C5A5E5BE3">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>5E98CFE3-DE96-A98F-0DBA-D3EF1188A760</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5C53A83A-68B2-1173-AB4B-AC0D84E289D6" referredColumn="3E4FBE77-17C3-F682-5157-B7D2F193D341"/>
+</associations>
+</Column>
+<Column name="imagen_ruta" id="F8FB810D-963E-37FF-E212-C3B1AD5F2527">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>32F62913-3C2D-E6D3-42FE-23B029947A67</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6F01F9AB-ACAB-66DB-8867-11796E09D7EB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="es_principal" id="8384F61D-F5B1-E2B2-8E44-823FF0123D38">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>46218773-6802-6477-0E40-1B2AFEA10701</importedID>
+<use>0</use>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>FALSE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="creado_en" id="641DED50-C5F8-A26E-3018-2EED92AEBD25">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>5B1199F8-28BB-91A9-F846-40D24229F30F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3611F2F4-4DFA-2D45-57A0-B8A3E024E0E9" name="imagenes_platos__IDX">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>659D0A20-D8A9-401B-4F6D-684228AE468D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1E63FF7-EBE5-3EDD-BF13-EB1437727A11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8483A760-2784-A213-CA0C-EAB63EF3091A" name="idx_imagenes_plato">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>2402D53C-4A66-581F-B257-377F584B6157</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26FAD9B9-FE47-3C41-8B88-035C5A5E5BE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74554A91-006C-B99C-F9D3-7CF6D3CD93C9" name="log_FK0v8">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26FAD9B9-FE47-3C41-8B88-035C5A5E5BE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

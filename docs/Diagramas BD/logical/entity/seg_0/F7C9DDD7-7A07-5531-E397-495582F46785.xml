@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F7C9DDD7-7A07-5531-E397-495582F46785" name="categorias plato">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>6310D291-EAE5-C12F-6504-89C260709A1F</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FAFA8A9A-48B7-B17A-C47A-9E9F43442026">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>57950F46-E173-5767-FE58-4A2632780A04</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="CCE9E059-9F4A-5508-F6E7-AB3B1DEB73FB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>4F01694A-814D-CE68-D3EA-590EE02E356B</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2834ED5F-BA96-567F-73E6-6D7D08F83614</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creado en" id="E75A2EB6-7DE6-78C5-D8BC-6B74BC45D74C">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>A25DA147-E597-00BE-1DEC-FC71684CC4AD</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="actualizado en" id="41808356-F609-4378-70EB-8B5E53A26DD8">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>AB3B95CB-7DB8-4F1A-23B2-E7EC454FF4CE</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="70B5AD00-8EC5-55D0-0654-0D6FBD78FD2A" name="categorias plato  IDX">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>02BDF2BE-B0B1-7554-684C-96F139A07F9C</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FAFA8A9A-48B7-B17A-C47A-9E9F43442026</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="B88983CA-93AE-53F1-2976-C036F5156B29" name="categorias plato  IDXv1">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>28D63311-43C8-A225-1EFE-92548311152C</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>CCE9E059-9F4A-5508-F6E7-AB3B1DEB73FB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

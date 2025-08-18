@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2E58582B-D326-C3F7-80B4-980088A9A609" name="compras">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>C9FFBAFE-21C7-A525-B6E7-4FFE942A5323</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="8EB1B925-3F33-E80B-220F-B321606EF50B">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>338DFC43-1AEF-390A-8F5F-A5C2D9CF4C50</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="proveedor id" id="BA2CE1B4-23E3-663A-B7CD-2CBDF3E4755D">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>B3F3A290-B64F-B6AD-2F96-871646ECF091</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<referedAttribute>BC5ED943-92A5-B17F-9BC0-4A7F3034458C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="documento id" id="E8850432-331C-7A4D-7E9E-6C6545218364">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>40EAC469-BC73-A00F-44EE-F2339C0BCA4B</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<referedAttribute>2281A838-6386-3B0F-3B18-84CD05043DF6</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero documento" id="B223CA26-B2D9-3F42-70DE-E18708A0C80A">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>41230178-B8F9-030C-7DCD-CDBFDA7E4A06</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>970CB8B8-45CB-1EAC-580B-2C2B98A11EC4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha" id="58AF2D08-ADB8-7FDD-294A-B32BE7C55889">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>BAE7B791-7838-ECA9-D799-9C4550BF3669</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>FE55F493-C515-D30F-1066-E90C1B16A6D0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="subtotal" id="772622A8-09B2-DD5D-C817-8973EDE8266E">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>379DCB7A-C3F3-25ED-3F04-D4DEDC5A58EA</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>3A065EAD-0024-3CAE-22E4-A78842C53293</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descuento" id="13243A4D-F882-F0A8-2BDF-CB0496A3422B">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>912C29DB-1E45-5588-1A74-D70CF9C976D3</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>3A065EAD-0024-3CAE-22E4-A78842C53293</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total" id="634920DB-A8CD-808B-4D39-0175FD96F96D">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>04D7E635-678C-A41E-B6DD-0C8A87E8F1CB</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>3A065EAD-0024-3CAE-22E4-A78842C53293</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="observaciones" id="942F5A5C-3B36-32C9-64E3-44E971C509E4">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>FB2D9460-70A2-D667-54BE-0F8A65075B94</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<domain>1F6DAB70-0B99-F783-084C-FAF5FF0747DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usuario id" id="D3E4E6E8-9DAA-5DAC-B608-D42D4B247D44">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>0BC7C97D-A55A-1333-BFC2-F171F7B576DE</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<referedAttribute>390C0176-F34D-8819-6BC8-899BF0030DE4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pdf ruta" id="36943B69-4DF7-345A-0F29-2612C7595B49">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>15012ADB-A41D-877D-D97C-91935F95CE42</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6F01F9AB-ACAB-66DB-8867-11796E09D7EB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creado en" id="DA95B014-913A-7FC5-4D5E-99C4AE67C650">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>1B3EE0DB-02DF-F6F0-3D71-C6AED55B31F6</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="actualizado en" id="E96DC986-47FD-D6A4-BC77-D5BBF801C04F">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>35147F74-FB78-5D24-0E04-7E4F5E626BDA</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A530520C-231B-72A7-2229-FAD035F37711" name="compras  IDX">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>404DF048-AA71-8E35-94A6-4C3AC2D3088E</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8EB1B925-3F33-E80B-220F-B321606EF50B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

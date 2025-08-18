@@ -1,0 +1,156 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E10E24BF-FBD8-EA71-B394-C47E9ED088F2" name="pagos">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>5BAD0179-CFD8-27A2-0BFF-5CB061249BB0</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="F1469E92-411C-61AD-1449-F31ADD969C68">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>1A6E609D-317B-99AC-2D99-B022042E4387</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="venta id" id="06CF8DA7-25C2-C103-2EAE-6AAF18E852DA">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>7E9ACFFA-5A0F-6D79-FAED-E183062DFF43</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<referedAttribute>6EC7702E-863B-E750-B437-6653BBC3FB0E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha" id="359298A7-B703-A5D1-E7AA-49241D56847A">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>24D52B19-8950-D1D5-02A9-53443FF36D85</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>FE55F493-C515-D30F-1066-E90C1B16A6D0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="monto" id="4A00FAE5-81E4-7668-228F-F65A565C0692">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>41BEC6E1-F010-94D8-F0A2-281C47CF6B47</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>3A065EAD-0024-3CAE-22E4-A78842C53293</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="metodo" id="D91C472B-AF98-5063-3639-AD6C7B9402AE">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>214D3584-11B2-64AE-F87F-AE0C08775A9B</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="referencia" id="75F57B11-ACCF-8DA9-AA48-54A218065563">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>F0F33F18-60B8-1B83-3161-26C289CA30C0</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2834ED5F-BA96-567F-73E6-6D7D08F83614</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="observaciones" id="3D01154E-FEB7-A79B-D0F1-6C3554EC0169">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>132FF3EF-016D-16BB-A066-9F241C13E32D</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<domain>1F6DAB70-0B99-F783-084C-FAF5FF0747DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="E78DFCE9-945D-41E3-7886-A86FFE9D8468">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>AE4FBC8A-A2DF-EC0A-40E9-EBD653136438</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>&apos;ingreso&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creado en" id="54B8B935-F68B-A3B4-6D68-8245718E4409">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>48F3F069-C7B1-2D32-CC80-4F2F008409BE</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>1177AF48-A93D-2420-00C3-D653FFFF873C</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2A911C42-BCF4-0741-C0AB-0793B4E26CDA" name="pagos  IDX">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>07A2E0E9-6AE7-057F-CE83-918B5618EEA4</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F1469E92-411C-61AD-1449-F31ADD969C68</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

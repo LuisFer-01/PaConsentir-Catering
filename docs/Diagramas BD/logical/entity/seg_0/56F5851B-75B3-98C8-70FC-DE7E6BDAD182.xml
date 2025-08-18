@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="56F5851B-75B3-98C8-70FC-DE7E6BDAD182" name="usuario rol">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>B56CD551-316B-9459-6CB6-B42682C9BB55</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="usuario id" id="FE7DDD0B-322C-25E6-96E4-061DE284D12B">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>118D0882-2029-88A2-04C2-AE1DB75862BB</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<referedAttribute>390C0176-F34D-8819-6BC8-899BF0030DE4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rol id" id="809D8569-FCA8-FCF3-6EC2-64AA98075952">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>3D155CC4-27E2-7CA2-B33F-BFF37FAD832C</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<referedAttribute>293ADFAB-8316-D4DF-95D6-28CD88BA91D9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F3C13B35-BBC0-3576-0D23-D54601CE24A6" name="usuario rol PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:22 UTC</createdTime>
+<generatorID>F6D20C48-2C50-A5E3-ED17-6D2555D3F903</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FE7DDD0B-322C-25E6-96E4-061DE284D12B</attributeRef>
+<attributeRef>809D8569-FCA8-FCF3-6EC2-64AA98075952</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

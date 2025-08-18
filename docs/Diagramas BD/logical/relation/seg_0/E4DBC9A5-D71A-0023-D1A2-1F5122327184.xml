@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="log_FK0v12" directorySegmentName="seg_0" id="E4DBC9A5-D71A-0023-D1A2-1F5122327184">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:44:23 UTC</createdTime>
+<generatorID>F24C4B9D-74F6-22DD-0A7B-BEF5C8AC7FA7</generatorID>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<engineerTo>
+<item key="F83D054F-6754-5CF7-0C72-B0AEB29264C1" value="true"/>
+</engineerTo>
+<sourcePk>E9B44C6B-64EB-9C90-E7C7-7F087BA2D8CF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>60613BFD-17D3-76AA-6C0D-781390A2B502</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F3B25E51-C149-37A0-E39D-5D7F9D57AAEE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

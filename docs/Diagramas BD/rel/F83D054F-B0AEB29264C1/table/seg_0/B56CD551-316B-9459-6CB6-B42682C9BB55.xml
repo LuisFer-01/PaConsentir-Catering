@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B56CD551-316B-9459-6CB6-B42682C9BB55" name="usuario_rol">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>834E372E-4351-4159-F43F-F444D6073205</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="usuario_id" id="5E551EE8-87B9-BD8B-33E9-E1B7EFA5A237">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>8438102D-CFB3-6AC5-52E4-DFFF27DA7A2C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC49AE92-AFD8-41DF-621C-8848D9C9DAD3" referredColumn="DC752090-EB1C-EA67-E43B-28854585D30F"/>
+</associations>
+</Column>
+<Column name="rol_id" id="9DB931B8-A38C-3B6C-CFEE-5222A907279C">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>B0DDD26C-E64B-6CAD-8DA2-DA111CB388A9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>8E155508-C64A-A199-9C02-BDC3C9AD15AC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DAB2BF12-2719-FA10-CAE6-40746905C81C" referredColumn="669A0567-323F-7C45-1000-E4685DD3FE53"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F6D20C48-2C50-A5E3-ED17-6D2555D3F903" name="usuario_rol_PK">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>36866486-A875-01BE-D7E7-174065C78CAC</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E551EE8-87B9-BD8B-33E9-E1B7EFA5A237"/>
+<colUsage columnID="9DB931B8-A38C-3B6C-CFEE-5222A907279C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FCA4995C-416F-DA64-DE63-10344A3EF5F4" name="log_FK0v2">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E551EE8-87B9-BD8B-33E9-E1B7EFA5A237"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C61D2A09-4BDB-024B-98ED-187DA6454591" name="log_FK0v3">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DB931B8-A38C-3B6C-CFEE-5222A907279C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserSqlServerv2k12 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.UserSqlServerv2k12" directorySegmentName="seg_0" id="505130BD-A69C-779B-3CDA-2FADB4EAB3F6_dbo" name="dbo">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<nullInstance>true</nullInstance>
+<storableNullInstance>true</storableNullInstance>
+<database>505130BD-A69C-779B-3CDA-2FADB4EAB3F6</database>
+</UserSqlServerv2k12>

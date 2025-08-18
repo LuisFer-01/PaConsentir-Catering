@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B8F78F8D-06B9-5C06-4C48-5DBA39E549CB" containerWithKeyObject="1FA5356E-4AAD-2D13-7B10-E35DA94C01DD" localFKIndex="D2338AB2-2575-B968-F905-C87416B45513" name="log_FK0v20">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>7C5A72F9-FE0D-EE77-64C0-530ACBDB7B5D</importedID>
+<referredTableLongName>cotizaciones</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>08B19442-ACAE-FD04-95CB-8F48BEA8BA3C</referredTableID>
+<keyObject>D1E36151-4391-5F38-3091-DAB79656D433</keyObject>
+<referredKeyID>D1E36151-4391-5F38-3091-DAB79656D433</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

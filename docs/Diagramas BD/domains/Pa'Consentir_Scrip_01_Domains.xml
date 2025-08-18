@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="Pa&apos;Consentir_Scrip_01_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_45" id="0CA6B0D7-32B4-5BAE-213C-36016C910CA3">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>45</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_0_0_0" id="1177AF48-A93D-2420-00C3-D653FFFF873C">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="1D8A39A5-9DDE-D2E1-B58E-92F33D528068">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>10</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="TEXT_0_0_0" id="1F6DAB70-0B99-F783-084C-FAF5FF0747DE">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT040</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Datetime_0_0_0" id="1FC688F1-9271-DB22-2467-346B1EDA08D5">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="2834ED5F-BA96-567F-73E6-6D7D08F83614">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>100</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="DECIMAL_12_2_0" id="3A065EAD-0024-3CAE-22E4-A78842C53293">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500" id="6F01F9AB-ACAB-66DB-8867-11796E09D7EB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>500</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="86F03C6B-2712-7659-5554-A1E93DBAFA60">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="8E155508-C64A-A199-9C02-BDC3C9AD15AC">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="970CB8B8-45CB-1EAC-580B-2C2B98A11EC4">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>50</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255" id="AD174566-9F45-C669-F692-B6D5C521FE5B">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>255</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="DECIMAL_10_2_0" id="B3DA3A0A-224A-1FB5-0127-73EC361FFCE8">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="FE55F493-C515-D30F-1066-E90C1B16A6D0">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 11:34:12 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>Pa&apos;Consentir_Scrip_01_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

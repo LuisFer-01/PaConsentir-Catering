@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7E1E8D7F-9B84-EB5A-8A04-FDD1E7B28414" containerWithKeyObject="DF2F2ADA-D8C2-B69B-8E7E-C1C351F42CA1" localFKIndex="AFD95A76-B454-21C1-6EC6-3FB78D5B85AF" name="log_FK0v11">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_01.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-08-18 12:38:03 UTC</createdTime>
+<ownerDesignName>Diagramas BD</ownerDesignName>
+<importedID>A8444293-ACB8-F806-C063-639EFAC1FCC7</importedID>
+<referredTableLongName>platos</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>E92479B6-7340-0348-4562-984D13ADB7E3</referredTableID>
+<keyObject>606FF9C5-7C07-1648-CF90-804178638306</keyObject>
+<referredKeyID>606FF9C5-7C07-1648-CF90-804178638306</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
