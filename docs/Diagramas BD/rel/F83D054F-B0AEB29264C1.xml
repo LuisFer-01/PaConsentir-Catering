@@ -3,7 +3,7 @@
 <createdBy>Usuario</createdBy>
 <createdTime>2025-08-18 11:32:05 UTC</createdTime>
 <ownerDesignName>Diagramas BD</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
+<shouldBeOpen>true</shouldBeOpen>
 <selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
 <importDDLFileStamps>
 <importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
