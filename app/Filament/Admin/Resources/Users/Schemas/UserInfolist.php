@@ -12,21 +12,23 @@ class UserInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('name'),
+                TextEntry::make('name')
+                    ->label('Nombre'),
                 TextEntry::make('lastname')
+                    ->label('Apellido')
                     ->placeholder('-'),
                 TextEntry::make('email')
-                    ->label('Email address'),
-                TextEntry::make('email_verified_at')
-                    ->dateTime()
-                    ->placeholder('-'),
+                    ->label('Correo'),
                 TextEntry::make('phone')
+                    ->label(label: 'Telefono')
                     ->placeholder('-'),
                 TextEntry::make('ci')
                     ->placeholder('-'),
                 TextEntry::make('address')
+                    ->label('Direccion')
                     ->placeholder('-'),
                 TextEntry::make('photo')
+                    ->label('Foto')
                     ->placeholder('-'),
                 TextEntry::make('rol_id')
                     ->numeric(),

@@ -14,21 +14,25 @@ use App\Models\Permiso;
 use App\Models\DetallePermiso;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
-use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\Checkbox;
-use Filament\Notifications\Notification;
-use BackedEnum;
-use Filament\Actions\EditAction;
-use Filament\Actions\ViewAction;
 use Filament\Actions\Action;
-use Filament\Support\Icons\Heroicon;
+use Filament\Actions\ViewAction;
+use Filament\Actions\EditAction;
+//use Filament\Forms\Components\Section;
+//use Filament\Forms\Components\Grid;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Grid;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Placeholder;
+use Filament\Notifications\Notification;
 use Illuminate\Support\Str;
+use BackedEnum;
+use Filament\Support\Icons\Heroicon;
+use Filament\Facades\Filament;
 
 class RolResource extends Resource
 {
     protected static ?string $model = Rol::class;
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Document;
 
     public static function getNavigationLabel(): string
     {
@@ -62,14 +66,13 @@ class RolResource extends Resource
                 ViewAction::make(),
                 EditAction::make(),
 
-                // BOTÓN: Configurar Permisos
                 Action::make('permisos')
                     ->label('Permisos')
                     ->icon('heroicon-o-key')
                     ->color('warning')
                     ->modalHeading(fn ($record) => "Permisos del Rol: {$record->nombre}")
                     ->modalSubmitActionLabel('Guardar Permisos')
-                    ->modalCancelActionLabel('Cancelar')
+                    ->modalWidth('7xl')
                     ->form(fn ($record) => static::getPermissionForm($record))
                     ->action(fn ($record, array $data) => static::savePermissions($record, $data)),
             ]);
@@ -96,93 +99,154 @@ class RolResource extends Resource
     }
 
     // ===================================================================
-    // MÉTODOS PARA EL MODAL DE PERMISOS
+    // MODAL DE PERMISOS POR RECURSO
     // ===================================================================
 
-    /**
-     * Formulario del modal: Checkbox por cada permiso
-     */
     public static function getPermissionForm($record): array
     {
+        $resources = Filament::getResources();
         $permisos = Permiso::where('estado', 1)->get();
-        $asignados = $record->detallePermiso->pluck('permiso_id')->toArray();
+        $asignados = $record->detallePermiso?->pluck('ruta', 'permiso_id')->toArray() ?? [];
 
-        return [
-            Grid::make(3)
-                ->schema(
-                    $permisos->map(function ($permiso) use ($asignados) {
-                        return Checkbox::make("permiso_{$permiso->id}")
-                            ->label($permiso->nombre)
-                            ->default(in_array($permiso->id, $asignados));
-                    })->toArray()
-                ),
-        ];
+        $form = [];
+
+        foreach ($resources as $resource) {
+            $resourceName = class_basename($resource);
+            $label = static::getResourceLabel($resource);
+
+            $form[] = Section::make($label)
+                ->schema([
+                    Grid::make(5)->schema([
+                        // Gestión Total
+                        Checkbox::make("total_{$resourceName}")
+                            ->label('Gestión Total')
+                            ->live()
+                            ->afterStateUpdated(function ($state, $set, $get) use ($resourceName) {
+                                $set("create_{$resourceName}", $state);
+                                $set("read_{$resourceName}", $state);
+                                $set("update_{$resourceName}", $state);
+                                $set("delete_{$resourceName}", $state);
+                            }),
+
+                        // Permisos individuales
+                        Checkbox::make("create_{$resourceName}")
+                            ->label('Crear')
+                            ->live()
+                            ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
+
+                        Checkbox::make("read_{$resourceName}")
+                            ->label('Leer')
+                            ->live()
+                            ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
+
+                        Checkbox::make("update_{$resourceName}")
+                            ->label('Actualizar')
+                            ->live()
+                            ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
+
+                        Checkbox::make("delete_{$resourceName}")
+                            ->label('Borrar')
+                            ->live()
+                            ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
+                    ]),
+                ])
+                ->collapsible()
+                ->collapsed();
+        }
+
+        return $form;
     }
 
-    /**
-     * Guardar permisos seleccionados en detalle_permiso
-     */
+    private static function updateTotal($state, $get, $set, $resourceName)
+    {
+        $allChecked = $get("create_{$resourceName}") &&
+                      $get("read_{$resourceName}") &&
+                      $get("update_{$resourceName}") &&
+                      $get("delete_{$resourceName}");
+
+        $set("total_{$resourceName}", $allChecked);
+    }
+
+    private static function getResourceLabel($resource): string
+    {
+        $name = class_basename($resource);
+        return match ($name) {
+            'UserResource' => 'Usuarios',
+            'ProductoResource' => 'Productos',
+            'CategoriaResource' => 'Categorías',
+            'ProveedorResource' => 'Proveedores',
+            'CompraResource' => 'Compras',
+            'ClienteResource' => 'Clientes',
+            'VentaResource' => 'Ventas',
+            'PagoResource' => 'Pagos',
+            default => Str::headline(str_replace('Resource', '', $name)),
+        };
+    }
+
     public static function savePermissions($record, array $data): void
     {
-        // Obtener IDs de permisos seleccionados
-        $selectedIds = collect($data)
-            ->filter(fn ($value, $key) => $value && Str::startsWith($key, 'permiso_'))
-            ->map(fn ($value, $key) => (int) Str::after($key, 'permiso_'))
-            ->values()
-            ->toArray();
+        $resources = Filament::getResources();
 
-        // Eliminar anteriores (borrado lógico)
+        // Desactivar todos los anteriores
         $record->detallePermiso()->update(['estado' => 0]);
 
-        // Crear nuevos
-        foreach ($selectedIds as $permisoId) {
-            $permiso = Permiso::find($permisoId);
-            if (!$permiso) continue;
+        foreach ($resources as $resource) {
+            $name = class_basename($resource);
+            $baseRoute = static::getBaseRoute($resource);
 
-            // Generar ruta según permiso
-            $ruta = static::generateRouteForPermission($permiso->nombre, $record);
-            $grupo = static::getGrupoForRol($record);
+            $permisos = [
+                'create' => $data["create_{$name}"] ?? false,
+                'read'   => $data["read_{$name}"] ?? false,
+                'update' => $data["update_{$name}"] ?? false,
+                'delete' => $data["delete_{$name}"] ?? false,
+            ];
 
-            DetallePermiso::create([
-                'rol_id' => $record->id_rol,
-                'permiso_id' => $permisoId,
-                'ruta' => $ruta,
-                'grupo' => $grupo,
-                'estado' => 1,
-            ]);
+            foreach ($permisos as $accion => $enabled) {
+                if (!$enabled) continue;
+
+                $ruta = static::generateRoute($baseRoute, $accion);
+                $permiso = Permiso::where('nombre', ucfirst($accion) === 'Read' ? 'Solo Lectura' : ucfirst($accion))
+                    ->first();
+
+                if (!$permiso) continue;
+
+                DetallePermiso::updateOrCreate(
+                    ['rol_id' => $record->id_rol, 'permiso_id' => $permiso->id, 'ruta' => $ruta],
+                    ['grupo' => static::getGrupo($resource), 'estado' => 1]
+                );
+            }
         }
 
         Notification::make()
-            ->title('Permisos actualizados correctamente')
+            ->title('Permisos actualizados')
             ->success()
             ->send();
     }
 
-    /**
-     * Genera ruta dinámica según tipo de permiso
-     */
-    private static function generateRouteForPermission(string $nombre, $record): string
+    private static function getBaseRoute($resource): string
     {
-        $base = '/admin/resources/rols'; // Cambia según el módulo
-        return match ($nombre) {
-            'Gestión Total' => "$base/*",
-            'Adición' => "$base/create",
-            'Edición' => "$base/{record}/edit",
-            'Eliminación' => "$base/{record}",
-            'Solo Lectura' => $base,
-            default => $base,
+        return '/admin/resources/' . strtolower(str_replace('Resource', '', class_basename($resource)));
+    }
+
+    private static function generateRoute(string $base, string $accion): string
+    {
+        return match ($accion) {
+            'create' => "$base/create",
+            'read'   => $base,
+            'update' => "$base/{record}/edit",
+            'delete' => "$base/{record}",
+            default  => $base,
         };
     }
 
-    /**
-     * Grupo según rol
-     */
-    private static function getGrupoForRol($record): string
+    private static function getGrupo($resource): string
     {
-        return match ($record->nombre) {
-            'Administrador' => 'ADMINISTRACIÓN',
-            'Vendedor' => 'VENTA',
-            'Almacén' => 'COMPRA',
+        $name = class_basename($resource);
+        return match (true) {
+            str_contains($name, 'User') || str_contains($name, 'Rol') || str_contains($name, 'Permiso') => 'ADMINISTRACIÓN',
+            str_contains($name, 'Producto') || str_contains($name, 'Categoria') => 'PARÁMETROS',
+            str_contains($name, 'Proveedor') || str_contains($name, 'Compra') => 'COMPRA',
+            str_contains($name, 'Cliente') || str_contains($name, 'Venta') || str_contains($name, 'Pago') => 'VENTA',
             default => 'OTROS',
         };
     }

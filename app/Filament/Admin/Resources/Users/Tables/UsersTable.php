@@ -18,22 +18,24 @@ class UsersTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
-                TextColumn::make('lastname')
+                    ->label('Nombre')
                     ->searchable(),
                 TextColumn::make('email')
-                    ->label('Email address')
+                    ->label('Correo')
                     ->searchable(),
                 /*TextColumn::make('email_verified_at')
                     ->dateTime()
                     ->sortable(),*/
                 TextColumn::make('phone')
+                    ->label('Telefono')
                     ->searchable(),
                 TextColumn::make('ci')
                     ->searchable(),
                 TextColumn::make('address')
+                    ->label('Direccion')
                     ->searchable(),
                 TextColumn::make('photo')
+                    ->label('Foto')
                     ->searchable(),
                 TextColumn::make('rol_id')
                     ->numeric()
