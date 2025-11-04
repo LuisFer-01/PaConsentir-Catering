@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1505C2CA-2A2E-3458-31C2-BA6897AD9B38" containerWithKeyObject="20CF994B-9B2F-2F48-0906-7A5A0C28ACA5" localFKIndex="23971D81-4EA2-7458-B63E-509707C2C9DC" name="receta_plato_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>FDEC8901-36DB-38F6-7BF8-0A0A4F3BC03E</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<referredTableLongName>plato</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>08FBD33A-D255-32F2-4C3A-208D263A6BB8</referredTableID>
+<keyObject>EB9BDDBF-B205-8C82-3121-C80D63F83D00</keyObject>
+<referredKeyID>EB9BDDBF-B205-8C82-3121-C80D63F83D00</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_plato</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

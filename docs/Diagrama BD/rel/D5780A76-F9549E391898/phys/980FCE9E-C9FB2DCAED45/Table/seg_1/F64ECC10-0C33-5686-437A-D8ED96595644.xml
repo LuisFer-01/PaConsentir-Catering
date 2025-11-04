@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="pago" directorySegmentName="seg_1" id="F64ECC10-0C33-5686-437A-D8ED96595644">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="updated_at" id="190FEAD9-BE0A-4400-C7A1-29C9770D14D1">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="id_pago" id="510EE6C9-2229-4D3D-AB24-A179785E4234">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="fecha_pago" id="8515756C-1F05-312C-1ADA-5AD2DFD7FA00">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ventas_id_venta" id="902FB101-C9BF-66B9-7424-630C94691CCC">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="tipopago_id_tipopago" id="C2F989A4-DC65-F845-275F-6A4267BD6873">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="created_at" id="C7959040-3838-039D-5021-DE7D24F45512">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="monto" id="D1F90183-DBE2-053A-E96F-3F7D64A3BF9F">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="estado" id="DE58404A-C76C-41B7-966C-7FB81AB11994">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="pago_tipopago_FK" id="A4EEBC03-0C83-3D72-4EA9-5DC827867A5A">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="pago_ventas_FK" id="B3EFDC41-F364-381B-650B-2202B52263F2">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="pago_PK" id="49803EA1-B73D-2637-A483-63F20BA57091">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>

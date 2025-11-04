@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="cliente" directorySegmentName="seg_0" id="31E67D40-6F83-7773-42FA-FC9682DE7479">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="nombre" id="30361EF4-B763-BF70-3CE3-3A4BE23215EE">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="created_at" id="5D0CA436-0163-FC28-DC29-713B6131B8DE">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="estado" id="6904AFDD-5A97-3649-0268-7D8FEAE6E126">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="updated_at" id="AF9CC552-BD04-5875-13C2-E58C8488379B">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ci" id="C3367739-7FAA-3705-959D-0115E0AA0060">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="direccion" id="DA724DD2-51BE-4464-DF5F-C772EEA37965">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="apellido" id="DBA5BFA6-6BDC-8A78-754E-973C32318B52">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="id_cliente" id="DC2A72D8-AD68-28FF-F5FC-7CCBEBCB2792">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="telefono" id="F9EEC528-EA9F-4341-973D-FA7847BA2398">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="email" id="FBB52B88-AECC-D8F2-07AA-B7F2F3E1171F">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="cliente_PK" id="9453ECB7-C104-794B-73FE-07062DC7BDA1">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>

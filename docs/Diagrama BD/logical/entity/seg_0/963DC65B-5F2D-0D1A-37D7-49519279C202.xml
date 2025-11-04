@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="963DC65B-5F2D-0D1A-37D7-49519279C202" name="hprproducto">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>D506DC21-D7C5-382A-6B3B-61EDB5DF9ECA</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id hpr" id="97640D3F-A5D6-E400-0071-0341401C770A">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>CFC2B219-3E40-BFE1-F3EF-527C6EF11284</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="producto id" id="5BFB7B80-E8C9-B787-6EB4-9F63FAF61641">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>C1997395-DAD4-59CE-8E65-043186E12659</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<referedAttribute>35AB6F4C-74F7-D7B7-F10D-A481EA0BC0BB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id usuario" id="FBA7D48E-3B3D-BD71-66CE-5C26C7B52DCB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>F8B7A651-CC71-8FBE-0E01-DAAD5E12205F</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<referedAttribute>F901E921-AC03-0098-B603-B7B1D720DB0B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio anterior" id="7460EECA-3BA5-CEB7-3740-140D89D4FD55">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>AD842495-A9C8-6FB2-3968-F775FCBF0C3C</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio nuevo" id="55241A8C-1640-253B-1A93-227F1449D6E3">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>8BF403B3-3016-233F-BC2B-1D4B14B7A09A</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha cambio" id="9303A5E5-0207-35ED-FC21-9882C7D444C9">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>BFAD1DD6-A649-631C-E4A4-DE4A6D3CAB1F</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created at" id="BA509180-C265-D93C-1B90-BDA914EF0FCF">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>0059DD80-A646-E79C-F4C3-A8E85C2C9436</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="updated at" id="54266D94-9AF2-2606-7C8C-369C9C067C73">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>8B23D4BC-45D7-9941-8310-9FEAF411492B</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C533F204-4B95-26AB-BBD2-3FADBF2DB40C" name="PRIMARYv6">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>A2087A04-10C4-9E72-F7DA-EA4F97CCD523</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>97640D3F-A5D6-E400-0071-0341401C770A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

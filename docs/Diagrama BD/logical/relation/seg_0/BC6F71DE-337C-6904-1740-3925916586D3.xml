@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ventas_tipodocumento_id_foreign" directorySegmentName="seg_0" id="BC6F71DE-337C-6904-1740-3925916586D3">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>FBC7851D-3319-2243-5CD4-24123BCD9232</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>9AC97490-AF84-4734-5DCF-AF1728CC8DA2</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3661F914-0A6A-FB90-1788-69CF6568C470</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3880EA6E-E275-1FC7-6FE8-64B2420026D6</targetEntity>
+<transferable>true</transferable>
+</Relation>

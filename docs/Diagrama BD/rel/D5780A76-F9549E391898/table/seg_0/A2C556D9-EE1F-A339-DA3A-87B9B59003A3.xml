@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A2C556D9-EE1F-A339-DA3A-87B9B59003A3" name="detalle_permiso">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>38E267FD-AB3A-8CB9-C582-89A221115893</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_detalle_permiso" id="8A2DEFC4-17C6-84C1-E587-D5BB531CBB4F">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>CE268FA3-1860-D0DA-AA49-35FDB244F41E</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rol_id_rol" id="A758D671-F4E9-69FE-52E5-72240A1E72E3">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>FD9A29C7-86F3-FD30-2CD5-378C30284403</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3D130E6-EBFA-5228-39B3-C1E951D16706" referredColumn="DE3D8A7E-58C0-F4BF-CB7C-D6192C4C0C4A"/>
+</associations>
+</Column>
+<Column name="permiso_id_permiso" id="2C7C9238-9C07-23E8-26FE-03EBA5A97828">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>6D26F952-0FBB-EE49-F251-82DC400CC876</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6391ED15-0BE1-C967-9D85-6DDCCE609E37" referredColumn="E308E5B6-7FE9-0531-CD15-F1E474111E9F"/>
+</associations>
+</Column>
+<Column name="ruta" id="E29FC6AB-1DF4-BF9D-39B5-663DA1BA9B5D">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>1DEB8CDA-B184-516B-A801-2D6EFAC4AAD8</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="grupo" id="DBA33521-AC36-EA84-214E-B9824FDDE7FC">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>9923E90B-1E19-A1CD-7920-950DB54F77EA</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="E8C9E7A3-1EE9-EF00-C39E-D6623F7A442D">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>9456B50F-FA1E-ECA1-8344-8B2E225692D3</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="D257E6DE-7FC2-7278-5644-3AEE42ADCA62">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>85BA7BCC-CEA8-CDC5-A892-BF8486359C0E</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="4387019D-DFEA-7A48-733A-03B480F672A7">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>A609B617-C880-9AD4-86AD-586AF39F50D5</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88FFF755-8582-B17E-F271-47E72EEDCA9E" name="detalle_permiso_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>041C2137-284C-9DFA-20BA-6FEF88AC0016</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A2DEFC4-17C6-84C1-E587-D5BB531CBB4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D5F187D-73C4-188C-3DFB-4F2F05262950" name="detalle_permiso_permiso_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>946E1943-6CF4-7B31-B990-A6D6309FA168</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C7C9238-9C07-23E8-26FE-03EBA5A97828"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6976A64-892C-DFCB-BD7B-C48041136AB1" name="detalle_permiso_rol_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>7562D689-C453-C7F6-7732-4D727742A06E</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A758D671-F4E9-69FE-52E5-72240A1E72E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

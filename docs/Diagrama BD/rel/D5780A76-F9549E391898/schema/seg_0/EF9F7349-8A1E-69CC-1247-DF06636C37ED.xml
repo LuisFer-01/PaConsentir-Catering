@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="examen_grado" directorySegmentName="seg_0" id="EF9F7349-8A1E-69CC-1247-DF06636C37ED">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 04:59:06 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<importedID>C243D64B-578D-61C6-0776-2DFE91658305</importedID>
+</SchemaObject>

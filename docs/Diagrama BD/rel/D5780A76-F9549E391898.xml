@@ -3,8 +3,15 @@
 <createdBy>Usuario</createdBy>
 <createdTime>2025-09-01 11:49:31 UTC</createdTime>
 <ownerDesignName>Diagrama BD</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
+<shouldBeOpen>true</shouldBeOpen>
 <selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>MySQL80</connName>
+<connUser>root</connUser>
+<connType>0</connType>
+</importConnectionStamp>
+</importConnectionStamps>
 <importDDLFileStamps>
 <importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
 <fileName>Pa&apos;Consentir_Scrip_02.sql</fileName>

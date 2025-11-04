@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B267FCB7-3F14-B077-53E2-FD767390477F" containerWithKeyObject="808750D3-8AB5-2940-EED1-2688800E0335" localFKIndex="0BA4BC35-C460-E937-04F0-2027948BDD5A" name="compra_tipopago_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>F9DD41C5-FC5C-F1D1-5AE3-C6A752A077DC</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<referredTableLongName>tipopago</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2B758A03-6414-928F-9831-4E33DDE33BD2</referredTableID>
+<keyObject>93C8B0F9-07A4-7F9F-69EA-F86A70C2C137</keyObject>
+<referredKeyID>93C8B0F9-07A4-7F9F-69EA-F86A70C2C137</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_tipopago</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

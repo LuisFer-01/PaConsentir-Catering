@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8EAFB9CE-5ED3-F43A-DA99-CC294764FC20" name="stock">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>9E2A7BBC-74A9-A9D5-181B-30C6165FBAFA</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_stock" id="0B67166C-192B-737A-0116-EE512B789192">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>24896D7F-E467-52A0-5A86-E4A39A061616</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="producto_id_producto" id="E10BB53C-C14C-36C4-C996-736E72D8F774">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>D860AA40-6D45-5FD6-E33D-7490DCA74DFE</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ACD30877-A312-F4F4-401B-0A77B44F6C7B" referredColumn="D85D613E-D1AA-2C97-3396-30912D1EAF9E"/>
+</associations>
+</Column>
+<Column name="cnt_minima" id="D65B5CBD-F6B9-D289-7C5F-1B27976E7620">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>AB9358C5-2618-925C-F7B0-D1E5A8637E47</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0.00</defaultValue>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cnt_actual" id="3C0F84B3-20C9-5F1B-DE14-898D2EF9CBCC">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>39545500-AE6E-66BB-B943-41EA80560E85</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0.00</defaultValue>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cnt_maxima" id="4CE879BE-FD0D-966A-03E3-266AC65CCC2B">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>1705CABB-1969-1105-5AAA-5687CB798658</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0.00</defaultValue>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="774684BD-DE1F-7BCD-8AB5-DD8BB994057F">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>A98BAF8C-2F71-DBBB-FFFF-27A7F5F66A1B</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="B47F6C90-32F4-9C51-AD2D-FC677CFEA55C">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>E9EAEF83-FCA1-510F-732E-BD40D2BF8C07</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7C608DA8-BAB6-BC77-A09F-575D87082975" name="stock_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>20B20079-6500-B281-DA22-190CAD4A00C6</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B67166C-192B-737A-0116-EE512B789192"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9615D900-2986-769D-D469-49702C6F7F4C" name="stock_producto_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>BEE96DB3-DFE6-63A7-A051-33400A9B3CB1</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E10BB53C-C14C-36C4-C996-736E72D8F774"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

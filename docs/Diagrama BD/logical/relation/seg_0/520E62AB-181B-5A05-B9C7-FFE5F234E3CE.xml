@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="detalle_venta_plato_id_foreign" directorySegmentName="seg_0" id="520E62AB-181B-5A05-B9C7-FFE5F234E3CE">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>9BF75BB5-714E-51CA-AED1-C4EAD26C330D</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>E0EAE075-E00E-10BA-A3F4-706258D9EBF1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>18B50F64-AC55-7562-CC21-FD2A90659BCF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B8FF8CC0-8277-DB77-145C-16B62CF09F08</targetEntity>
+<transferable>true</transferable>
+<deleteRule>SET NULL</deleteRule>
+</Relation>

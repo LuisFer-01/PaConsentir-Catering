@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname')->nullable();
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone')->nullable();
             $table->string('ci')->nullable();
@@ -30,6 +31,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->foreignId('rol_id')->constrained('rol', 'id_rol')->onDelete('restrict');
             $table->boolean('estado')->default(1);
+            $table->rememberToken();
             $table->timestamps();
         });
 

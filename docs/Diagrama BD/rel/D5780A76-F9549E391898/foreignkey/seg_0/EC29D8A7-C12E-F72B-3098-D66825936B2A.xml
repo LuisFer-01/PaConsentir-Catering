@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EC29D8A7-C12E-F72B-3098-D66825936B2A" containerWithKeyObject="8464F9CB-C54E-F138-81CD-6C4E5FA6EEAE" localFKIndex="FA69ECC9-7A6B-D609-69E1-56DDCB6F7C03" name="plato_img_plato_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>FF36CFF2-213D-CE4A-D240-29695A5C1F09</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<referredTableLongName>plato</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>08FBD33A-D255-32F2-4C3A-208D263A6BB8</referredTableID>
+<keyObject>EB9BDDBF-B205-8C82-3121-C80D63F83D00</keyObject>
+<referredKeyID>EB9BDDBF-B205-8C82-3121-C80D63F83D00</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_plato</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

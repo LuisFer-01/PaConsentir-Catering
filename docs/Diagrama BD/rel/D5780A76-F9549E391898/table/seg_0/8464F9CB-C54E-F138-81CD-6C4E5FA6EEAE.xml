@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8464F9CB-C54E-F138-81CD-6C4E5FA6EEAE" name="plato_img">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>7F542AC5-F5BD-33CF-D49E-4F47A2FC4FFA</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_platoimg" id="AB4F0C16-ABED-0AF2-09F3-3D650CD964C8">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>555FB5D8-2694-7A40-D3BA-B6F0B1849547</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plato_id_plato" id="56290692-C01E-A8B2-D225-8479D415B45C">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>5D4EF757-0379-D8AC-9B3B-BD004E51E161</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EC29D8A7-C12E-F72B-3098-D66825936B2A" referredColumn="B52B9226-AE84-0FBD-3908-247D575D5102"/>
+</associations>
+</Column>
+<Column name="img_ruta" id="7880213A-66D1-B4D7-EF38-CC55644A4851">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>F3E6D489-99B9-149F-28C7-5EFC4C0562DE</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="104A80D1-9C60-51DD-7F17-C9C7A455155E">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>FAECD227-111D-2798-5732-62F1E72AE908</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="D5DBE379-3A24-FB30-57B9-CC8FDEFB124F">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>CFD21528-011E-9DB2-023F-3A1C6259E131</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="updated_at" id="2525E4A5-1EEC-6F7E-508A-5AB5CE1651C1">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>267FC27E-06FC-050D-9745-7C83D2B0E10E</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6D86BF5F-5F79-4B9B-E85B-46CF8B311AE7" name="plato_img_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>431C416B-AA90-3224-9680-C72E18273435</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB4F0C16-ABED-0AF2-09F3-3D650CD964C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA69ECC9-7A6B-D609-69E1-56DDCB6F7C03" name="plato_img_plato_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>FF36CFF2-213D-CE4A-D240-29695A5C1F09</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56290692-C01E-A8B2-D225-8479D415B45C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

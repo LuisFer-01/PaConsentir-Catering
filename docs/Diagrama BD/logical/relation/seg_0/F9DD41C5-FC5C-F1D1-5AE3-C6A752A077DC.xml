@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="compra_tipopago_id_foreign" directorySegmentName="seg_0" id="F9DD41C5-FC5C-F1D1-5AE3-C6A752A077DC">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>605B0E50-686C-37C7-881F-FEF38A8C1FB1</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>197D8607-2184-F979-55C0-E87A95CCD12C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5B0117B0-26A5-B9B8-FE2B-9C4538BD80EC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5E0329EF-6CEB-3F53-DA6A-EE6183C097EC</targetEntity>
+<transferable>true</transferable>
+</Relation>

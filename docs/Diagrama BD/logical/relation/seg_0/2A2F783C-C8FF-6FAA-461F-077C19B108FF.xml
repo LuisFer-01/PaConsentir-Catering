@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="plato_menu_id_foreign" directorySegmentName="seg_0" id="2A2F783C-C8FF-6FAA-461F-077C19B108FF">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>8214E26F-7451-7D2F-5A1F-282EAF10A0CC</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>56DB8F0E-D561-1A80-9408-0C0752A5FF25</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>56AA486C-1BC2-9F63-79C3-B87671A5CE96</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>18B50F64-AC55-7562-CC21-FD2A90659BCF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>SET NULL</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="users_rol_id_foreign" directorySegmentName="seg_0" id="48FB8BF5-F4FB-BA6F-BD39-C3CE59F239EB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>C7E7ACD2-C410-8CAC-A083-C2B4E9576156</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>8F20032C-8538-958B-F5B5-A405F231D0E7</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>987C91E3-0648-8091-0CB6-061789FFDA6D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>29A4546C-7925-87F3-A360-8616362D886A</targetEntity>
+<transferable>true</transferable>
+</Relation>

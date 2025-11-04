@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pago_venta_id_foreign" directorySegmentName="seg_0" id="2925DBFD-110D-1612-0403-45EF5D864DAB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>137CAB9A-7921-BB5A-2A2E-0EECB4B02F28</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>433B2D70-41F9-91F1-E18C-B02ABF6738A8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3880EA6E-E275-1FC7-6FE8-64B2420026D6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CB9DEB68-AB2B-AF35-DF1B-54E5CA93ADEF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

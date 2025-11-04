@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="compra_proveedor_id_foreign" directorySegmentName="seg_0" id="19627BE6-52F9-D4E7-A4CF-7E8DAE242D42">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>500C080A-CDA8-B93C-1C9E-63CB20EE3758</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>F5875B68-C3EA-FBC7-E669-74A6477A1CDB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F086FB54-406C-1189-9691-EE30CFAF8E42</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5E0329EF-6CEB-3F53-DA6A-EE6183C097EC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>SET NULL</deleteRule>
+</Relation>

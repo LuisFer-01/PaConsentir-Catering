@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5D06E978-39B3-9A0F-4747-EC4662AFE5BC" containerWithKeyObject="F64ECC10-0C33-5686-437A-D8ED96595644" localFKIndex="B3EFDC41-F364-381B-650B-2202B52263F2" name="pago_ventas_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>2925DBFD-110D-1612-0403-45EF5D864DAB</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<referredTableLongName>ventas</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>93CAD455-71CA-F2FC-B6CF-FF16E57DE1C0</referredTableID>
+<keyObject>BFC858CA-1381-FAA1-3A3A-5436F9432474</keyObject>
+<referredKeyID>BFC858CA-1381-FAA1-3A3A-5436F9432474</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_venta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

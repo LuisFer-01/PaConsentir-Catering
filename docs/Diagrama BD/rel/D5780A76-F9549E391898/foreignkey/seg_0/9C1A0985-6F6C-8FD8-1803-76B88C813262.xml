@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9C1A0985-6F6C-8FD8-1803-76B88C813262" containerWithKeyObject="08FBD33A-D255-32F2-4C3A-208D263A6BB8" localFKIndex="51AF3B85-C793-0800-B8FA-B3DB8BFC91CF" name="plato_menu_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>2A2F783C-C8FF-6FAA-461F-077C19B108FF</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<referredTableLongName>menu</referredTableLongName>
+<deleteRule>SET NULL</deleteRule>
+<referredTableID>A2C2F628-32AA-3764-C633-FA2801116E20</referredTableID>
+<keyObject>1386E6E6-74A6-C696-4A3B-14FBE05FCC17</keyObject>
+<referredKeyID>1386E6E6-74A6-C696-4A3B-14FBE05FCC17</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_menu</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

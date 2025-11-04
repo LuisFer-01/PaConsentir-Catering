@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A0A58A33-912A-DEA2-F521-C3658A5E9C78" containerWithKeyObject="2F97EB87-F510-E1E5-47A8-797357AED4AC" localFKIndex="9B59BE10-2E61-CED1-1FE1-877ADEA23340" name="producto_undmedida_FK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:11:39 UTC</createdTime>
+<generatorID>7C070D26-A2DB-1F24-BBEC-573FE8321E10</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<referredTableLongName>undmedida</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>54EE36E0-9AF8-F561-14B2-EA4D7C7CDD60</referredTableID>
+<keyObject>6D6CD297-648E-7A6B-89C5-78FD474B4549</keyObject>
+<referredKeyID>6D6CD297-648E-7A6B-89C5-78FD474B4549</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_undmedida</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

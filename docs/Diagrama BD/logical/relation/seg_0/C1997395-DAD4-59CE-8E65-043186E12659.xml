@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="hprproducto_producto_id_foreign" directorySegmentName="seg_0" id="C1997395-DAD4-59CE-8E65-043186E12659">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-11-04 05:00:06 UTC</createdTime>
+<generatorID>FEF91A0B-10F5-BA46-D741-7095CA2BC221</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>0617EAB4-9B66-8D7A-A9B1-7FF89E0EED6F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6398A336-28AA-8AF7-93CD-FE71D3AF2669</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>963DC65B-5F2D-0D1A-37D7-49519279C202</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

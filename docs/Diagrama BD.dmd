@@ -18,5 +18,8 @@
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="D3232763-6788-C53A-CC3C-965132BD415F">
 <designStoragePath>F:\Pa&apos;Consentir_Scrip_02</designStoragePath>
 </designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="A5FD0BCB-0729-6FCB-681D-953F8CC7D0B0">
+<designStoragePath>F:\Data\Laravel_Dev\Examen-Grado\docs</designStoragePath>
+</designDescr>
 </usedDesignStorageDescriptors>
 </OSDM_Design>
