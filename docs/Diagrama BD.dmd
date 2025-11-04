@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Diagrama BD" id="712221F2-8519-519E-A4F0-6CAF77096FD5" version="3.5">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 11:48:37 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>712221F2-8519-519E-A4F0-6CAF77096FD5</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7155F382-FD59-88CE-C00A-ECB3A324A366">
+<designStoragePath>F:\Pa&apos;Consentir_Scrip_02</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="C83513FD-D3CD-2744-55D3-578F0343FD46">
+<designStoragePath>F:\Pa&apos;Consentir_Scrip_02</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="CB027194-3BA0-5554-8BF6-563E6C3B043F">
+<designStoragePath>F:\Pa&apos;Consentir_Scrip_02</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="D3232763-6788-C53A-CC3C-965132BD415F">
+<designStoragePath>F:\Pa&apos;Consentir_Scrip_02</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

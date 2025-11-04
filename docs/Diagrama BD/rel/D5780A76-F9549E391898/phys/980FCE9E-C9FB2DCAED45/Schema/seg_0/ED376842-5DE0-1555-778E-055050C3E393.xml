@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaSqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.SchemaSqlServerv2k5" name="SCHEMA12" directorySegmentName="seg_0" id="ED376842-5DE0-1555-778E-055050C3E393">
+<sourceDDLFile>Pa&apos;Consentir_Scrip_02.sql</sourceDDLFile>
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 11:50:33 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+</SchemaSqlServerv2k5>

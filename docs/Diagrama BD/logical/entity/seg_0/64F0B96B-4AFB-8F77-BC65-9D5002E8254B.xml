@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="64F0B96B-4AFB-8F77-BC65-9D5002E8254B" name="productos insumo">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>5D080719-6F6F-31D3-0707-EFABB2407823</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C1A201C1-E4F5-6315-AE30-2B3E535384A3">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>1ADCD06B-9A4F-C610-AA5D-FC5804F20562</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<domain>A12BF3A2-AB49-3ABE-2C48-F2537842741D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="728FB5B7-5AD5-710B-4F12-42DBC9EE1D7E">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>B2E724FB-0518-F610-11D1-F2D7A8970F7E</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B73CE373-5C56-7904-A015-56456040E610</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="F17353E8-7F4B-E950-B8DD-2B40307B9E77">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>F77F524F-0274-E153-ADF3-1A44B37E5998</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<domain>136E39F3-1504-3B84-2E77-7DF07C1657BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="unidad medida id" id="662B4F33-8838-932B-36FD-2696A95F1040">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>BEF7654E-2B06-1646-4294-FB83E7BF1FBB</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<referedAttribute>25737B7C-EDA3-7855-9CE5-9614034823A4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<domain>A12BF3A2-AB49-3ABE-2C48-F2537842741D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio compra" id="52C0DC13-B469-D5E4-F6AF-2B47387F3E63">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>9B6074E3-5EA4-0072-9061-EBB2908F19F2</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>2E21EB9C-08AD-05FC-CBFF-7B11AD4B0388</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio venta" id="71AE5C02-576E-6C5C-8BDF-38EFF8E9C576">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>29AE4F7B-4EFE-F1C9-AD09-6BEB24F1F004</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>2E21EB9C-08AD-05FC-CBFF-7B11AD4B0388</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stock actual" id="D6A1F3D9-2512-A294-DBF3-063E0EA316C0">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>DB430DB6-A68A-C9D2-250F-A81357CC3F27</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>2E21EB9C-08AD-05FC-CBFF-7B11AD4B0388</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>0.00</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stock minimo" id="CF45FD90-CA32-421C-0653-97A8440F10F0">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>5F462A7E-CD03-D4FE-19D0-736B244AA858</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>2E21EB9C-08AD-05FC-CBFF-7B11AD4B0388</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>0.00</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created at" id="70862C62-56CA-B62E-55F4-6F654DDA0117">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>FDB760A7-AAE1-FB94-43C0-BB696790E53A</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>D0CCB34D-5348-C665-ED2E-2C9DFB79080A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="updated at" id="3D649395-32E4-7DCB-3397-B5BFF856A579">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>DF177EED-3524-E755-EAAF-8B4EF7A10DE2</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>D0CCB34D-5348-C665-ED2E-2C9DFB79080A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0BB39D98-F41D-FAEA-5464-2B8CB7D136A9" name="productos insumo PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>EFECC7CC-37EA-0DBF-4E3E-B35A572D8E89</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C1A201C1-E4F5-6315-AE30-2B3E535384A3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

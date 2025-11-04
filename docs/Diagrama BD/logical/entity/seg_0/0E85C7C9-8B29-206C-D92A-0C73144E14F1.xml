@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0E85C7C9-8B29-206C-D92A-0C73144E14F1" name="platos">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>B5300772-8DCA-313B-962B-51F886EB7A3A</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="EDFCBC7D-7CE0-AE96-6D07-D361B406D5EF">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>0952833C-336E-1F1E-EB18-477937470B0A</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<domain>A12BF3A2-AB49-3ABE-2C48-F2537842741D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="CB6DD24B-2585-26C8-0DA7-BEE33E1D262C">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>1FFA087C-481A-ABFB-AA91-64AC23298A1C</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B73CE373-5C56-7904-A015-56456040E610</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="41D60C58-2596-63A4-48E9-688DF68CF11A">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>B7F9E5AC-8898-3E09-02FF-6E26656A9D52</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<domain>136E39F3-1504-3B84-2E77-7DF07C1657BB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio venta" id="B64EEC4C-96C2-E70D-81FE-F6BF5DA9A9E9">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>74AE2ACF-2E7E-44E9-BD76-5C0A28F3AFB2</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>2E21EB9C-08AD-05FC-CBFF-7B11AD4B0388</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created at" id="08C00DF2-7132-FE7E-B0DE-238AA8F9A610">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>B69FCFE9-81BD-C24D-9DA2-0F3DC8519966</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>D0CCB34D-5348-C665-ED2E-2C9DFB79080A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="updated at" id="458AA906-99B1-9965-8F04-D4CA9897E60C">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>67093CAB-2884-C3BB-4771-8FDDF1620979</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>D0CCB34D-5348-C665-ED2E-2C9DFB79080A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DC141117-75B5-8679-9D44-9FFD916D4211" name="platos PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>7C8167B5-658C-701A-3EBA-994A6B07E5F6</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EDFCBC7D-7CE0-AE96-6D07-D361B406D5EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

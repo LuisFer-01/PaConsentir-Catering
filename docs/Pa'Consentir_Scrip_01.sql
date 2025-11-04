@@ -13,9 +13,7 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
-    email_verified_at DATETIME NULL,
     password VARCHAR(255) NOT NULL,
-    remember_token VARCHAR(100) NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
@@ -49,6 +47,7 @@ CREATE TABLE permisos (
 -- Relación muchos a muchos entre roles y permisos
 -- -----------------------------------------------------
 CREATE TABLE rol_permiso (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     rol_id INT NOT NULL,
     permiso_id INT NOT NULL,
     PRIMARY KEY (rol_id, permiso_id),
@@ -61,6 +60,7 @@ CREATE TABLE rol_permiso (
 -- Asigna roles a los usuarios
 -- -----------------------------------------------------
 CREATE TABLE usuario_rol (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT NOT NULL,
     rol_id INT NOT NULL,
     PRIMARY KEY (usuario_id, rol_id),
@@ -106,6 +106,7 @@ CREATE TABLE categorias_insumo (
 -- Relación muchos a muchos entre productos_insumo y categorias_insumo
 -- -----------------------------------------------------
 CREATE TABLE producto_categoria (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     insumo_id INT NOT NULL,
     categoria_id INT NOT NULL,
     PRIMARY KEY (insumo_id, categoria_id),
@@ -177,6 +178,7 @@ CREATE TABLE menús (
 -- Relación muchos a muchos entre menús y platos
 -- -----------------------------------------------------
 CREATE TABLE menu_plato (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     menu_id INT NOT NULL,
     plato_id INT NOT NULL,
     PRIMARY KEY (menu_id, plato_id),
@@ -287,48 +289,8 @@ CREATE TABLE detalle_compras (
 ) ENGINE=InnoDB;
 
 -- -----------------------------------------------------
--- Tabla: cotizaciones
--- Presupuestos enviados a clientes
--- -----------------------------------------------------
-CREATE TABLE cotizaciones (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT NOT NULL,
-    fecha DATE NOT NULL,
-    subtotal DECIMAL(12,2) NOT NULL,
-    descuento DECIMAL(12,2) DEFAULT 0,
-    total DECIMAL(12,2) NOT NULL,
-    estado ENUM('borrador', 'enviado', 'aceptado', 'rechazado') NOT NULL DEFAULT 'borrador',
-    observaciones TEXT NULL,
-    usuario_id INT NOT NULL,
-    pdf_ruta VARCHAR(500) NULL,
-    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    actualizado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (cliente_id) REFERENCES clientes(id),
-    FOREIGN KEY (usuario_id) REFERENCES users(id)
-) ENGINE=InnoDB;
-
--- -----------------------------------------------------
--- Tabla: detalle_cotizaciones
--- Desglose de platos o menús en una cotización
--- -----------------------------------------------------
-CREATE TABLE detalle_cotizaciones (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    cotizacion_id INT NOT NULL,
-    plato_id INT NULL,
-    menu_id INT NULL,
-    cantidad DECIMAL(10,2) NOT NULL,
-    precio_unitario DECIMAL(10,2) NOT NULL,
-    subtotal DECIMAL(12,2) NOT NULL,
-    modificaciones TEXT NULL,
-    FOREIGN KEY (cotizacion_id) REFERENCES cotizaciones(id) ON DELETE CASCADE,
-    FOREIGN KEY (plato_id) REFERENCES platos(id) ON DELETE SET NULL,
-    FOREIGN KEY (menu_id) REFERENCES menús(id) ON DELETE SET NULL,
-    CHECK (plato_id IS NOT NULL OR menu_id IS NOT NULL)
-) ENGINE=InnoDB;
-
--- -----------------------------------------------------
 -- Tabla: ventas
--- Registro de ventas o pedidos a clientes
+-- Registro de ventas o pedidos a clWientes
 -- -----------------------------------------------------
 CREATE TABLE ventas (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -387,24 +349,6 @@ CREATE TABLE pagos (
 ) ENGINE=InnoDB;
 
 -- -----------------------------------------------------
--- Tabla: log
--- Auditoría de acciones realizadas por cada usuario
--- -----------------------------------------------------
-CREATE TABLE log (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT NOT NULL,
-    accion VARCHAR(100) NOT NULL,
-    tabla_afectada VARCHAR(50) NOT NULL,
-    registro_id INT NULL,
-    datos_antiguos TEXT NULL,
-    datos_nuevos TEXT NULL,
-    ip_address VARCHAR(45) NULL,
-    user_agent TEXT NULL,
-    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
-) ENGINE=InnoDB;
-
--- -----------------------------------------------------
 -- Índices para mejorar el rendimiento
 -- -----------------------------------------------------
 CREATE INDEX idx_compras_proveedor ON compras(proveedor_id);
@@ -412,6 +356,4 @@ CREATE INDEX idx_ventas_cliente ON ventas(cliente_id);
 CREATE INDEX idx_detalle_compras_compra ON detalle_compras(compra_id);
 CREATE INDEX idx_detalle_ventas_venta ON detalle_ventas(venta_id);
 CREATE INDEX idx_pagos_venta ON pagos(venta_id);
-CREATE INDEX idx_log_usuario ON log(usuario_id);
-CREATE INDEX idx_log_fecha ON log(creado_en);
 CREATE INDEX idx_imagenes_plato ON imagenes_platos(plato_id);

@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0DAA9067-EC34-996B-17FD-22D07F3A75CF" name="documentos">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>AEC53252-4E78-8BAD-CBB4-BFB4768F2B94</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D8B2B61F-F847-C0E0-D952-0186B2A24398">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>D2561678-5FAE-8DFA-6D64-F638D0F420EF</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<domain>A12BF3A2-AB49-3ABE-2C48-F2537842741D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="D2CE21EB-01B3-3F04-0CA6-5C871ED32EC6">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>03A7D1CF-1165-5ED5-DC04-DEEA47DFB904</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>74B4CC9F-77B3-85CA-CDB9-C00B08857682</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prefijo" id="B9B477C0-04C5-0814-75EF-4E6424F12CDB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>FA2C607F-E59D-EFB9-6DA3-951DDE8F6D9A</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D3E8CB8D-0512-44AA-6B3E-1E415D0FC916</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ultimo numero" id="3C7ABBDC-489D-E9FF-68F5-0546E6BDCEAE">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>C87E5001-F362-5598-F34D-E087F2083303</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D16AB0F6-5E24-0018-03B8-83A64A7F5397</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="8BB762DE-66FB-9874-553E-83466D34C219">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>6526DEF1-E5BE-EEA9-A89F-9229AB39BDF4</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<constraintName>estado_CHCK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>37AEA767-E5BC-E46D-0B7D-479ED6DE066B</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<listOfValues>
+<valueDef value="activo" description=""/>
+<valueDef value="inactivo" description=""/>
+</listOfValues>
+<defaultValue>&apos;activo&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created at" id="7A17B72E-145A-96E4-30D7-D5955704F2BF">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>4059316A-0708-16BE-470C-293B20F4B5E2</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>D0CCB34D-5348-C665-ED2E-2C9DFB79080A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="updated at" id="06AC3577-4AEF-8CE9-8BC3-D3D5E037C004">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>710057DC-A235-2FA3-E363-5CAACD7F95B6</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<domain>D0CCB34D-5348-C665-ED2E-2C9DFB79080A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="55B28B11-586E-79BC-8931-E35DCEA6328B" name="documentos PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>A0C10AB5-17CC-C64D-BCAD-BCFD5A1D85EA</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D8B2B61F-F847-C0E0-D952-0186B2A24398</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="D57ADA99-1B1B-1BA2-411A-06A0E3B4FB75" name="documentos nombre unique">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>EC0FDE52-786B-6CE7-0C19-1B848AEC9044</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>D2CE21EB-01B3-3F04-0CA6-5C871ED32EC6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

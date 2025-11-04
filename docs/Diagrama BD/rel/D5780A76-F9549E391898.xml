@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="D5780A76-1606-6F24-58E5-F9549E391898" mainViewID="E8FFD181-316A-3C25-C9AC-98180DF5CBFB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 11:49:31 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>Pa&apos;Consentir_Scrip_02.sql</fileName>
+<pathName>F:\Data\Laravel_Dev\Examen-Grado\docs</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

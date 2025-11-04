@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceDB2v80 class="oracle.dbtools.crest.model.design.storage.db2.v80.TableSpaceDB2v80" name="StorageObject_22" directorySegmentName="seg_0" id="074F86B5-82A4-32AF-9FCB-4F3FE52F0D90">
+<createdTime>2025-09-01 11:51:09 UTC</createdTime>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<dataBase>DSNDB04</dataBase>
+</TableSpaceDB2v80>

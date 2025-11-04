@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="productos_insumo_unidad_medida_id_foreign" directorySegmentName="seg_0" id="BEF7654E-2B06-1646-4294-FB83E7BF1FBB">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>81D9AA8D-34AE-C420-7E40-09590859F5F1</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>4F855A74-C172-D91A-F8ED-49A7AEB8D397</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>18989BFC-A30B-3FF2-85DB-1C76F1300310</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>64F0B96B-4AFB-8F77-BC65-9D5002E8254B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

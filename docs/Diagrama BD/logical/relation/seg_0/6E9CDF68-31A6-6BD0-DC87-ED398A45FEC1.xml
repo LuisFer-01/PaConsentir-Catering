@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="recetas_plato_id_foreign" directorySegmentName="seg_0" id="6E9CDF68-31A6-6BD0-DC87-ED398A45FEC1">
+<createdBy>Usuario</createdBy>
+<createdTime>2025-09-01 12:05:08 UTC</createdTime>
+<generatorID>385B9783-F0C4-8B7A-B9DC-94410BB1EECB</generatorID>
+<ownerDesignName>Diagrama BD</ownerDesignName>
+<engineerTo>
+<item key="D5780A76-1606-6F24-58E5-F9549E391898" value="true"/>
+</engineerTo>
+<sourcePk>DC141117-75B5-8679-9D44-9FFD916D4211</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0E85C7C9-8B29-206C-D92A-0C73144E14F1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1FC130AE-6C94-E854-0474-245CC34F814A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

@@ -11,13 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::create('rol', function (Blueprint $table) {
+            $table->id('id_rol');
+            $table->string('nombre', 50);
+            $table->string('descripcion', 150)->nullable();
+            $table->boolean('estado')->default(1);
+            $table->timestamps();
+        });
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('lastname')->nullable();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->string('phone')->nullable();
+            $table->string('ci')->nullable();
+            $table->string('address')->nullable();
+            $table->string('photo')->nullable();
+            $table->foreignId('rol_id')->constrained('rol', 'id_rol')->onDelete('restrict');
+            $table->boolean('estado')->default(1);
             $table->timestamps();
         });
 
