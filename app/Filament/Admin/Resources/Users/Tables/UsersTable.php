@@ -10,6 +10,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
 
 class UsersTable
 {
@@ -34,10 +35,13 @@ class UsersTable
                 TextColumn::make('address')
                     ->label('Direccion')
                     ->searchable(),
-                TextColumn::make('photo')
+                ImageColumn::make('photo')
                     ->label('Foto')
-                    ->searchable(),
-                TextColumn::make('rol_id')
+                    ->circular()
+                    ->defaultImageUrl(asset('users/default-avatar-01.png'))
+                    ->height(40),
+                TextColumn::make('rol.nombre')
+                    ->label('Rol')
                     ->numeric()
                     ->sortable(),
                 IconColumn::make('estado')

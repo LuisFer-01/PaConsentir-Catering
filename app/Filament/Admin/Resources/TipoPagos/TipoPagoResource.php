@@ -24,7 +24,7 @@ class TipoPagoResource extends Resource
     use AuthorizesWithPermission;
     protected static ?string $model = TipoPago::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::MapPin;
 
     public static function getNavigationLabel(): string
     {

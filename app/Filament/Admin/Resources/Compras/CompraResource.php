@@ -33,7 +33,7 @@ class CompraResource extends Resource
 {
     protected static ?string $model = Compra::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::ShoppingCart;
 
     protected static ?string $recordTitleAttribute = 'Compra';
 

@@ -5,6 +5,7 @@ namespace App\Filament\Admin\Resources\Users\Schemas;
 use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
+use Filament\Tables\Columns\ImageColumn;
 
 class UserInfolist
 {
@@ -27,8 +28,11 @@ class UserInfolist
                 TextEntry::make('address')
                     ->label('Direccion')
                     ->placeholder('-'),
-                TextEntry::make('photo')
+                ImageColumn::make('photo')
                     ->label('Foto')
+                    ->circular()
+                    ->defaultImageUrl(asset('users/default-avatar-01.png'))
+                    ->height(70)
                     ->placeholder('-'),
                 TextEntry::make('rol_id')
                     ->label('Rol')

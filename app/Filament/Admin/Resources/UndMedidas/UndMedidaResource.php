@@ -24,7 +24,7 @@ class UndMedidaResource extends Resource
     use AuthorizesWithPermission;
     protected static ?string $model = UndMedida::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Wallet;
 
     public static function getNavigationLabel(): string
     {

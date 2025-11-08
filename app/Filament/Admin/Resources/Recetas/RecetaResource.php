@@ -17,14 +17,29 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class RecetaResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Receta::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Receta';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Receta';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Recetas';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Receta';
+    }
 
     public static function form(Schema $schema): Schema
     {
