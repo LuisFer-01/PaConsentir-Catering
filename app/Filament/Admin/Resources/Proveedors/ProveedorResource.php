@@ -17,14 +17,29 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class ProveedorResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Proveedor::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Proveedor';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Proveedor';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Proveedores';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Proveedor';
+    }
 
     public static function form(Schema $schema): Schema
     {

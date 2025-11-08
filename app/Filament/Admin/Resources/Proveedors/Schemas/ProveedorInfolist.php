@@ -12,22 +12,30 @@ class ProveedorInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('nombre'),
+                TextEntry::make('nombre')
+                    ->label('Nombre')
+                    ->placeholder('-'),
                 TextEntry::make('contacto')
+                    ->label('Contacto')
                     ->placeholder('-'),
                 TextEntry::make('telefono')
+                    ->label('Telefono')
                     ->placeholder('-'),
                 TextEntry::make('email')
-                    ->label('Email address')
+                    ->label('Correo')
                     ->placeholder('-'),
                 TextEntry::make('direccion')
+                    ->label('Direccion')
                     ->placeholder('-'),
                 IconEntry::make('estado')
+                    ->label('Estado')
                     ->boolean(),
                 TextEntry::make('created_at')
+                    ->label('Creado en')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->label('Actualizado en')
                     ->dateTime()
                     ->placeholder('-'),
             ]);

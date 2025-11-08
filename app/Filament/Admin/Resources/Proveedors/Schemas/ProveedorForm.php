@@ -13,15 +13,20 @@ class ProveedorForm
         return $schema
             ->components([
                 TextInput::make('nombre')
+                    ->label('Nombre')
                     ->required(),
-                TextInput::make('contacto'),
+                TextInput::make('contacto')
+                    ->label('Contacto'),
                 TextInput::make('telefono')
+                    ->label('Telefono')
                     ->tel(),
                 TextInput::make('email')
-                    ->label('Email address')
+                    ->label('Correo')
                     ->email(),
-                TextInput::make('direccion'),
+                TextInput::make('direccion')
+                    ->label('Direccion'),
                 Toggle::make('estado')
+                    ->label('Estado')
                     ->required(),
             ]);
     }
