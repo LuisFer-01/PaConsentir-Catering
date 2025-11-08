@@ -26,7 +26,20 @@ class TipoDocumentoResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Tipo Documento';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Tipo Documento';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Tipo Documentos';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Tipo Documento';
+    }
 
     public static function form(Schema $schema): Schema
     {
