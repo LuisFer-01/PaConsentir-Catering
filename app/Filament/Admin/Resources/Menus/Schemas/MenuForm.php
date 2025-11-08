@@ -14,12 +14,17 @@ class MenuForm
         return $schema
             ->components([
                 TextInput::make('nombre')
+                    ->label('Nombre')
                     ->required(),
-                TextInput::make('descripcion'),
+                TextInput::make('descripcion')
+                    ->label('Descripcion'),
                 DatePicker::make('fecha_inicio')
+                    ->label('Fecha Inicio')
                     ->required(),
-                DatePicker::make('fecha_fin'),
+                DatePicker::make('fecha_fin')
+                    ->label('Fecha Fin'),
                 Toggle::make('estado')
+                    ->label('Estado')
                     ->required(),
             ]);
     }

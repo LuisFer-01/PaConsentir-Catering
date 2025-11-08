@@ -17,21 +17,36 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class MenuResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Menu::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Menu';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Menu';
+    }
 
-    public static function form(Schema $schema): Schema
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Menu';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Menu';
+    }
+
+    public static function form(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
         return MenuForm::configure($schema);
     }
 
-    public static function infolist(Schema $schema): Schema
+    public static function infolist(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
         return MenuInfolist::configure($schema);
     }

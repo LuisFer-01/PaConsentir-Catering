@@ -12,20 +12,28 @@ class MenuInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('nombre'),
+                TextEntry::make('nombre')
+                    ->label('Nombre')
+                    ->placeholder('-'),
                 TextEntry::make('descripcion')
+                    ->label('Descripcion')
                     ->placeholder('-'),
                 TextEntry::make('fecha_inicio')
+                    ->label('Fecha Inicio')
                     ->date(),
                 TextEntry::make('fecha_fin')
+                    ->label('Fecha Fin')
                     ->date()
                     ->placeholder('-'),
                 IconEntry::make('estado')
+                    ->label('Estado')
                     ->boolean(),
                 TextEntry::make('created_at')
+                    ->label('Creado en')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->label('Actualizado en')
                     ->dateTime()
                     ->placeholder('-'),
             ]);

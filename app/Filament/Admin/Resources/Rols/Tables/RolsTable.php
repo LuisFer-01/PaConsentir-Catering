@@ -66,7 +66,7 @@ class RolsTable
                 \Filament\Actions\EditAction::make(),
 
                 // Acción individual: Activar
-                \Filament\Actions\Action::make('activar')
+                /*\Filament\Actions\Action::make('activar')
                     ->label('Activar')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
@@ -81,7 +81,7 @@ class RolsTable
                     ->color('danger')
                     ->visible(fn ($record) => $record->estado == 1)
                     ->action(fn ($record) => $record->update(['estado' => 0]))
-                    ->requiresConfirmation(),
+                    ->requiresConfirmation(),*/
             ])
             ->bulkActions([
                 // Acción masiva: Activar
