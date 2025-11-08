@@ -26,7 +26,20 @@ class UndMedidaResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Unidad Medida';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Unidad Medida';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Unidad Medidas';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Unidad Medida';
+    }
 
     public static function form(Schema $schema): Schema
     {

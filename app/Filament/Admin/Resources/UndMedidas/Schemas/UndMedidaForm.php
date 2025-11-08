@@ -13,9 +13,12 @@ class UndMedidaForm
         return $schema
             ->components([
                 TextInput::make('nombre')
+                    ->label('Nombre')
                     ->required(),
-                TextInput::make('descripcion'),
+                TextInput::make('descripcion')
+                    ->label('Descripcion'),
                 Toggle::make('estado')
+                    ->label('Estado')
                     ->required(),
             ]);
     }
