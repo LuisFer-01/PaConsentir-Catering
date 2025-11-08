@@ -17,14 +17,29 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class CategoriaResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Categoria::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Categoria';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Categoría';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Categorias';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Categoría';
+    }
 
     public static function form(Schema $schema): Schema
     {
