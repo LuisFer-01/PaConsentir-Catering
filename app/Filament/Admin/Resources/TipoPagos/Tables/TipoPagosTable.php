@@ -8,6 +8,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Actions\ViewAction;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
@@ -20,33 +21,88 @@ class TipoPagosTable
         return $table
             ->columns([
                 TextColumn::make('nombre')
+                    ->label('Nombre')
                     ->searchable(),
                 TextColumn::make('descripcion')
+                    ->label('Descripción')
                     ->searchable(),
                 IconColumn::make('estado')
-                    ->boolean(),
+                    ->label('Estado')
+                    ->boolean()
+                    ->trueIcon('heroicon-o-check-circle')
+                    ->falseIcon('heroicon-o-x-circle')
+                    ->trueColor('success')
+                    ->falseColor('danger'),
                 TextColumn::make('created_at')
+                    ->label('Creado')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+                    ->label('Actualizado')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                TrashedFilter::make(),
+                SelectFilter::make('estado')
+                    ->label('Filtrar por estado')
+                    ->options([
+                        ''  => 'Todos',
+                        '1' => 'Activos',
+                        '0' => 'Inactivos',
+                    ])
+                    ->query(function ($query, $state) {
+                        if ($state['value'] === '' || $state['value'] === null) {
+                            return $query; // Mostrar todos
+                        }
+                        return $query->where('estado', $state['value']);
+                    })
+                    ->default(''),
             ])
-            ->recordActions([
-                ViewAction::make(),
-                EditAction::make(),
+            ->actions([
+                \Filament\Actions\ViewAction::make(),
+                \Filament\Actions\EditAction::make(),
+
+                // Acción individual: Activar
+                /*\Filament\Actions\Action::make('activar')
+                    ->label('Activar')
+                    ->icon('heroicon-o-check-circle')
+                    ->color('success')
+                    ->visible(fn ($record) => $record->estado == 0)
+                    ->action(fn ($record) => $record->update(['estado' => 1]))
+                    ->requiresConfirmation(),
+
+                // Acción individual: Desactivar
+                \Filament\Actions\Action::make('desactivar')
+                    ->label('Desactivar')
+                    ->icon('heroicon-o-x-circle')
+                    ->color('danger')
+                    ->visible(fn ($record) => $record->estado == 1)
+                    ->action(fn ($record) => $record->update(['estado' => 0]))
+                    ->requiresConfirmation(),*/
             ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                    ForceDeleteBulkAction::make(),
-                    RestoreBulkAction::make(),
-                ]),
-            ]);
+            ->bulkActions([
+                // Acción masiva: Activar
+                \Filament\Actions\BulkAction::make('activar')
+                    ->label('Activar seleccionados')
+                    ->icon('heroicon-o-check-circle')
+                    ->color('success')
+                    ->action(fn ($records) => $records->each->update(['estado' => 1]))
+                    ->requiresConfirmation()
+                    ->deselectRecordsAfterCompletion(),
+
+                // Acción masiva: Desactivar
+                \Filament\Actions\BulkAction::make('desactivar')
+                    ->label('Desactivar seleccionados')
+                    ->icon('heroicon-o-x-circle')
+                    ->color('danger')
+                    ->action(fn ($records) => $records->each->update(['estado' => 0]))
+                    ->requiresConfirmation()
+                    ->deselectRecordsAfterCompletion(),
+            ])
+            ->emptyStateHeading('No hay roles')
+            ->emptyStateDescription('Crea el primer rol para comenzar.')
+            ->striped();
     }
 }

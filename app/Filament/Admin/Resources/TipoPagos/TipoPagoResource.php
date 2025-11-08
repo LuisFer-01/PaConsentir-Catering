@@ -26,7 +26,20 @@ class TipoPagoResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Tipo Pago';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Tipo Pago';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Tipo Pagos';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Tipo Pago';
+    }
 
     public static function form(Schema $schema): Schema
     {
