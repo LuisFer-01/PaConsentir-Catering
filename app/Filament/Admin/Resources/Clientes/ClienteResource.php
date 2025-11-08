@@ -17,14 +17,29 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class ClienteResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Cliente::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Cliente';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Cliente';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Clientes';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Cliente';
+    }
 
     public static function form(Schema $schema): Schema
     {

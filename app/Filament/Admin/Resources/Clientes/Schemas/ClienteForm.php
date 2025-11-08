@@ -13,16 +13,23 @@ class ClienteForm
         return $schema
             ->components([
                 TextInput::make('nombre')
+                    ->label('Nombre')
                     ->required(),
-                TextInput::make('apellido'),
+                TextInput::make('apellido')
+                    ->label('Apellido'),
                 TextInput::make('telefono')
+                    ->label('Telefono')
                     ->tel(),
                 TextInput::make('email')
+                    ->label('Correo')
                     ->label('Email address')
                     ->email(),
-                TextInput::make('direccion'),
-                TextInput::make('ci'),
+                TextInput::make('direccion')
+                    ->label('Direccion'),
+                TextInput::make('ci')
+                    ->label('CI'),
                 Toggle::make('estado')
+                    ->label('Estado')
                     ->required(),
             ]);
     }

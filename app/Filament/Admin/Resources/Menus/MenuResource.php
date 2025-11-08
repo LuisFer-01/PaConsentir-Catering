@@ -33,7 +33,7 @@ class MenuResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Gestionar Menu';
+        return 'Gestionar Menus';
     }
 
     public static function getModelLabel(): string
