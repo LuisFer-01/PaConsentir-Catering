@@ -16,8 +16,4 @@ class ListUsers extends ListRecords
             CreateAction::make(),
         ];
     }
-    protected function getTableQuery(): \Illuminate\Database\Eloquent\Builder
-    {
-        return parent::getTableQuery()->where('estado', 1);
-    }
 }

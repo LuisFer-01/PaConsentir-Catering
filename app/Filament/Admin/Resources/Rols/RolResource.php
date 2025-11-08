@@ -28,9 +28,11 @@ use Illuminate\Support\Str;
 use BackedEnum;
 use Filament\Support\Icons\Heroicon;
 use Filament\Facades\Filament;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class RolResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Rol::class;
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Document;
 
@@ -72,9 +74,17 @@ class RolResource extends Resource
                     ->color('warning')
                     ->modalHeading(fn ($record) => "Permisos del Rol: {$record->nombre}")
                     ->modalSubmitActionLabel('Guardar Permisos')
-                    ->modalWidth('7xl')
+                    ->modalWidth('4xl')
                     ->form(fn ($record) => static::getPermissionForm($record))
                     ->action(fn ($record, array $data) => static::savePermissions($record, $data)),
+            ]);
+    }
+
+    public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
+    {
+        return parent::getEloquentQuery()
+            ->withoutGlobalScopes([
+                // Si usas algún scope global, quítalo
             ]);
     }
 
@@ -105,47 +115,71 @@ class RolResource extends Resource
     public static function getPermissionForm($record): array
     {
         $resources = Filament::getResources();
-        $permisos = Permiso::where('estado', 1)->get();
-        $asignados = $record->detallePermiso?->pluck('ruta', 'permiso_id')->toArray() ?? [];
+        $detallePermisos = $record->detallePermisos()
+            ->where('estado', 1)
+            ->get()
+            ->keyBy(fn($dp) => $dp->permiso->ruta); // clave: ruta del permiso
 
         $form = [];
 
         foreach ($resources as $resource) {
             $resourceName = class_basename($resource);
             $label = static::getResourceLabel($resource);
+            $baseRoute = static::getBaseRoute($resource);
+
+            // Rutas esperadas
+            $rutas = [
+                'total'  => "$baseRoute/*",
+                'create' => "$baseRoute/create",
+                'read'   => $baseRoute,
+                'update' => "$baseRoute/{record}/edit",
+                'delete' => "$baseRoute/{record}",
+            ];
+
+            // Estado de cada permiso
+            $permisos = [
+                'total'  => $detallePermisos->has($rutas['total']),
+                'create' => $detallePermisos->has($rutas['create']),
+                'read'   => $detallePermisos->has($rutas['read']),
+                'update' => $detallePermisos->has($rutas['update']),
+                'delete' => $detallePermisos->has($rutas['delete']),
+            ];
 
             $form[] = Section::make($label)
                 ->schema([
                     Grid::make(5)->schema([
-                        // Gestión Total
                         Checkbox::make("total_{$resourceName}")
                             ->label('Gestión Total')
+                            ->default($permisos['total'])
                             ->live()
-                            ->afterStateUpdated(function ($state, $set, $get) use ($resourceName) {
+                            ->afterStateUpdated(function ($state, $set) use ($resourceName) {
                                 $set("create_{$resourceName}", $state);
                                 $set("read_{$resourceName}", $state);
                                 $set("update_{$resourceName}", $state);
                                 $set("delete_{$resourceName}", $state);
                             }),
 
-                        // Permisos individuales
                         Checkbox::make("create_{$resourceName}")
                             ->label('Crear')
+                            ->default($permisos['create'])
                             ->live()
                             ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
 
                         Checkbox::make("read_{$resourceName}")
                             ->label('Leer')
+                            ->default($permisos['read'])
                             ->live()
                             ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
 
                         Checkbox::make("update_{$resourceName}")
                             ->label('Actualizar')
+                            ->default($permisos['update'])
                             ->live()
                             ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
 
                         Checkbox::make("delete_{$resourceName}")
                             ->label('Borrar')
+                            ->default($permisos['delete'])
                             ->live()
                             ->afterStateUpdated(fn ($state, $set, $get) => static::updateTotal($state, $get, $set, $resourceName)),
                     ]),
@@ -160,9 +194,9 @@ class RolResource extends Resource
     private static function updateTotal($state, $get, $set, $resourceName)
     {
         $allChecked = $get("create_{$resourceName}") &&
-                      $get("read_{$resourceName}") &&
-                      $get("update_{$resourceName}") &&
-                      $get("delete_{$resourceName}");
+                    $get("read_{$resourceName}") &&
+                    $get("update_{$resourceName}") &&
+                    $get("delete_{$resourceName}");
 
         $set("total_{$resourceName}", $allChecked);
     }
@@ -187,33 +221,43 @@ class RolResource extends Resource
     {
         $resources = Filament::getResources();
 
-        // Desactivar todos los anteriores
-        $record->detallePermiso()->update(['estado' => 0]);
+        // Desactivar todos
+        $record->detallePermisos()->update(['estado' => 0]);
 
         foreach ($resources as $resource) {
             $name = class_basename($resource);
             $baseRoute = static::getBaseRoute($resource);
 
-            $permisos = [
-                'create' => $data["create_{$name}"] ?? false,
-                'read'   => $data["read_{$name}"] ?? false,
-                'update' => $data["update_{$name}"] ?? false,
-                'delete' => $data["delete_{$name}"] ?? false,
+            $acciones = [
+                'create' => "$baseRoute/create",
+                'read'   => $baseRoute,
+                'update' => "$baseRoute/{record}/edit",
+                'delete' => "$baseRoute/{record}",
             ];
 
-            foreach ($permisos as $accion => $enabled) {
-                if (!$enabled) continue;
+            foreach ($acciones as $accion => $ruta) {
+                $key = "{$accion}_{$name}";
+                if (empty($data[$key])) continue;
 
-                $ruta = static::generateRoute($baseRoute, $accion);
-                $permiso = Permiso::where('nombre', ucfirst($accion) === 'Read' ? 'Solo Lectura' : ucfirst($accion))
-                    ->first();
-
+                $permiso = Permiso::where('ruta', $ruta)->first();
                 if (!$permiso) continue;
 
                 DetallePermiso::updateOrCreate(
-                    ['rol_id' => $record->id_rol, 'permiso_id' => $permiso->id, 'ruta' => $ruta],
-                    ['grupo' => static::getGrupo($resource), 'estado' => 1]
+                    ['rol_id' => $record->id_rol, 'permiso_id' => $permiso->id_permiso],
+                    ['estado' => 1]
                 );
+            }
+
+            // Gestión Total
+            $totalKey = "total_{$name}";
+            if (!empty($data[$totalKey])) {
+                $permisoTotal = Permiso::where('ruta', "$baseRoute/*")->first();
+                if ($permisoTotal) {
+                    DetallePermiso::updateOrCreate(
+                        ['rol_id' => $record->id_rol, 'permiso_id' => $permisoTotal->id_permiso],
+                        ['estado' => 1]
+                    );
+                }
             }
         }
 

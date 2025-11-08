@@ -12,15 +12,20 @@ class RolInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('nombre'),
+                TextEntry::make('nombre')
+                    ->label('Nombre'),
                 TextEntry::make('descripcion')
+                    ->label('Apellido')
                     ->placeholder('-'),
                 IconEntry::make('estado')
+                    ->label('Estado')
                     ->boolean(),
                 TextEntry::make('created_at')
+                    ->label('Creado en')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->label('Actualizado en')
                     ->dateTime()
                     ->placeholder('-'),
             ]);

@@ -49,14 +49,17 @@ class RolsTable
                 SelectFilter::make('estado')
                     ->label('Filtrar por estado')
                     ->options([
+                        ''  => 'Todos',
                         '1' => 'Activos',
                         '0' => 'Inactivos',
                     ])
-                    ->query(fn ($query, $state) =>
-                        $state['value'] !== null
-                            ? $query->where('estado', $state['value'])
-                            : $query
-                    ),
+                    ->query(function ($query, $state) {
+                        if ($state['value'] === '' || $state['value'] === null) {
+                            return $query; // Mostrar todos
+                        }
+                        return $query->where('estado', $state['value']);
+                    })
+                    ->default(''),
             ])
             ->actions([
                 \Filament\Actions\ViewAction::make(),

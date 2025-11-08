@@ -17,9 +17,11 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class UndMedidaResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = UndMedida::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;

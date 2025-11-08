@@ -31,13 +31,16 @@ class UserInfolist
                     ->label('Foto')
                     ->placeholder('-'),
                 TextEntry::make('rol_id')
+                    ->label('Rol')
                     ->numeric(),
                 IconEntry::make('estado')
                     ->boolean(),
                 TextEntry::make('created_at')
+                    ->label('Creado')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->label('Actualizado')
                     ->dateTime()
                     ->placeholder('-'),
             ]);

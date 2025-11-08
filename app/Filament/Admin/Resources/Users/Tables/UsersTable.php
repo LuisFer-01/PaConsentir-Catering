@@ -41,7 +41,12 @@ class UsersTable
                     ->numeric()
                     ->sortable(),
                 IconColumn::make('estado')
-                    ->boolean(),
+                    ->label('Estado')
+                    ->boolean()
+                    ->trueIcon('heroicon-o-check-circle')
+                    ->falseIcon('heroicon-o-x-circle')
+                    ->trueColor('success')
+                    ->falseColor('danger'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -55,21 +60,24 @@ class UsersTable
                 SelectFilter::make('estado')
                     ->label('Filtrar por estado')
                     ->options([
+                        ''  => 'Todos',
                         '1' => 'Activos',
                         '0' => 'Inactivos',
                     ])
-                    ->query(fn ($query, $state) =>
-                        $state['value'] !== null
-                            ? $query->where('estado', $state['value'])
-                            : $query
-                    ),
+                    ->query(function ($query, $state) {
+                        if ($state['value'] === '' || $state['value'] === null) {
+                            return $query; // Mostrar todos
+                        }
+                        return $query->where('estado', $state['value']);
+                    })
+                    ->default(''),
             ])
             ->actions([
                 \Filament\Actions\ViewAction::make(),
                 \Filament\Actions\EditAction::make(),
 
                 // Acción individual: Activar
-                \Filament\Actions\Action::make('activar')
+                /*\Filament\Actions\Action::make('activar')
                     ->label('Activar')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
@@ -84,7 +92,7 @@ class UsersTable
                     ->color('danger')
                     ->visible(fn ($record) => $record->estado == 1)
                     ->action(fn ($record) => $record->update(['estado' => 0]))
-                    ->requiresConfirmation(),
+                    ->requiresConfirmation(),*/
             ])
             ->bulkActions([
                 // Acción masiva: Activar
@@ -105,8 +113,8 @@ class UsersTable
                     ->requiresConfirmation()
                     ->deselectRecordsAfterCompletion(),
             ])
-            ->emptyStateHeading('No hay roles')
-            ->emptyStateDescription('Crea el primer rol para comenzar.')
+            ->emptyStateHeading('No hay usuarios')
+            ->emptyStateDescription('Crea el primer usuario para comenzar.')
             ->striped();
     }
 }
