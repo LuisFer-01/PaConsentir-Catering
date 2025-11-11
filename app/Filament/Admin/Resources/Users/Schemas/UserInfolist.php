@@ -24,6 +24,7 @@ class UserInfolist
                     ->label(label: 'Telefono')
                     ->placeholder('-'),
                 TextEntry::make('ci')
+                    ->label('CI')
                     ->placeholder('-'),
                 TextEntry::make('address')
                     ->label('Direccion')
@@ -34,7 +35,7 @@ class UserInfolist
                     ->defaultImageUrl(asset('users/default-avatar-01.png'))
                     ->height(70)
                     ->placeholder('-'),
-                TextEntry::make('rol_id')
+                TextEntry::make('rol.nombre')
                     ->label('Rol')
                     ->numeric(),
                 IconEntry::make('estado')

@@ -17,6 +17,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('admin123'),
             'phone' => '04141234567',
             'ci' => 'V-98765432',
+            'photo' => 'users/default-avatar-01.png',
             'address' => 'Oficina Central',
             'rol_id' => 1,
             'estado' => 1

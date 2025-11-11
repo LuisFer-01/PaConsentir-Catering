@@ -17,9 +17,10 @@ class EditPlato extends EditRecord
     {
         return [
             ViewAction::make(),
-            DeleteAction::make(),
-            ForceDeleteAction::make(),
-            RestoreAction::make(),
+            DeleteAction::make()
+                ->label('Desactivar')
+                ->icon('heroicon-o-trash')
+                ->action(fn ($record) => $record->update(['estado' => 0])),
         ];
     }
 }

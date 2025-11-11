@@ -17,14 +17,29 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Traits\AuthorizesWithPermission;
 
 class PlatoResource extends Resource
 {
+    use AuthorizesWithPermission;
     protected static ?string $model = Plato::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Plato';
+    public static function getNavigationLabel(): string
+    {
+        return 'Gestionar Plato';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Gestionar Platos';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Plato';
+    }
 
     public static function form(Schema $schema): Schema
     {

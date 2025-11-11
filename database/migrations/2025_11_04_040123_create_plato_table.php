@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('descripcion', 300)->nullable();
             $table->decimal('precio', 10, 2);
             $table->foreignId('menu_id')->nullable()->constrained('menu', 'id_menu')->onDelete('set null');
+            $table->string('img_ruta')->nullable();
             $table->boolean('estado')->default(1);
             $table->timestamps();
         });
