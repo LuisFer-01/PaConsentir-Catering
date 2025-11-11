@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('nombre', 150);
             $table->string('descripcion', 300)->nullable();
             $table->decimal('precio', 10, 2);
+            $table->integer('cantidad')->nullable();
             $table->foreignId('menu_id')->nullable()->constrained('menu', 'id_menu')->onDelete('set null');
             $table->string('img_ruta')->nullable();
             $table->boolean('estado')->default(1);

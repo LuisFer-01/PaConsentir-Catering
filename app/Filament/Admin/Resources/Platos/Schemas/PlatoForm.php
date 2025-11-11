@@ -24,6 +24,10 @@ class PlatoForm
                     ->label('Precio')
                     ->required()
                     ->numeric(),
+                TextInput::make('cantidad')
+                    ->label('Cantidad')
+                    ->required()
+                    ->numeric(),
                 Select::make('menu_id')
                     ->label('Menu')
                     ->options(Menu::all()->pluck('nombre', 'id_menu'))

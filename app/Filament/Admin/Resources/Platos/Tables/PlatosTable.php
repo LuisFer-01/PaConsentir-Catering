@@ -31,6 +31,10 @@ class PlatosTable
                     ->label('Precio')
                     ->numeric()
                     ->sortable(),
+                TextColumn::make('cantidad')
+                    ->label('Cantidad')
+                    ->numeric()
+                    ->sortable(),
                 TextColumn::make('menu.nombre')
                     ->label('Menu')
                     ->numeric()

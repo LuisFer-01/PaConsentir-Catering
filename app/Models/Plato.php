@@ -11,7 +11,7 @@ class Plato extends Model
 
     protected $table = 'plato';
     protected $primaryKey = 'id_plato';
-    protected $fillable = ['nombre', 'descripcion', 'precio', 'menu_id', 'img_ruta', 'estado'];
+    protected $fillable = ['nombre', 'descripcion', 'precio', 'cantidad', 'menu_id', 'img_ruta', 'estado'];
     protected $casts = [
         'precio' => 'decimal:2',
         'estado' => 'boolean'

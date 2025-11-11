@@ -24,6 +24,10 @@ class PlatoInfolist
                 TextEntry::make('precio')
                     ->label('Precio')
                     ->numeric(),
+                TextEntry::make('cantidad')
+                    ->label('Cantidad')
+                    ->placeholder('-')
+                    ->numeric(),
                 TextEntry::make('menu.nombre')
                     ->label('Menu')
                     ->numeric()

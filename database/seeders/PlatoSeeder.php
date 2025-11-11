@@ -13,6 +13,7 @@ class PlatoSeeder extends Seeder
             'nombre' => 'Pabellón Criollo',
             'descripcion' => 'Arroz, carne, caraotas, plátano',
             'precio' => 8.50,
+            'cantidad' => 25,
             'menu_id' => 1,
             'img_ruta' => 'platos/default-plato-01.png',
             'estado' => 1
