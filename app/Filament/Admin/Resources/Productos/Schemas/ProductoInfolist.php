@@ -6,6 +6,8 @@ use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Infolists\Components\ImageEntry;
+use Illuminate\Support\Facades\Storage;
 
 class ProductoInfolist
 {
@@ -28,11 +30,16 @@ class ProductoInfolist
                 TextEntry::make('undmedida.nombre')
                     ->label('Unidad de Medida')
                     ->numeric(),
-                ImageColumn::make('photo')
-                    ->label('Foto')
+                ImageEntry::make('img_ruta')
+                    ->label('Imagen')
                     ->circular()
+                    ->height(120)
+                    ->width(120)
                     ->defaultImageUrl(asset('productos/default-product-01.png'))
-                    ->height(70)
+                    ->url(fn ($record) => $record->img_ruta 
+                        ? Storage::url($record->img_ruta) 
+                        : asset('productos/default-product-01.png')
+                    )
                     ->placeholder('-'),
                 IconEntry::make('estado')
                     ->label('Estado')

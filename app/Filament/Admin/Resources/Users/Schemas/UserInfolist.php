@@ -6,6 +6,8 @@ use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Infolists\Components\ImageEntry;
+use Illuminate\Support\Facades\Storage;
 
 class UserInfolist
 {
@@ -29,17 +31,27 @@ class UserInfolist
                 TextEntry::make('address')
                     ->label('Direccion')
                     ->placeholder('-'),
-                ImageColumn::make('photo')
+                ImageEntry::make('photo')
                     ->label('Foto')
                     ->circular()
+                    ->height(120)
+                    ->width(120)
                     ->defaultImageUrl(asset('users/default-avatar-01.png'))
-                    ->height(70)
+                    ->url(fn ($record) => $record->photo 
+                        ? Storage::url($record->photo) 
+                        : asset('users/default-avatar-01.png')
+                    )
                     ->placeholder('-'),
                 TextEntry::make('rol.nombre')
                     ->label('Rol')
                     ->numeric(),
                 IconEntry::make('estado')
-                    ->boolean(),
+                    ->label('Estado')
+                    ->boolean()
+                    ->trueIcon('heroicon-o-check-circle')
+                    ->falseIcon('heroicon-o-x-circle')
+                    ->trueColor('success')
+                    ->falseColor('danger'),
                 TextEntry::make('created_at')
                     ->label('Creado')
                     ->dateTime()

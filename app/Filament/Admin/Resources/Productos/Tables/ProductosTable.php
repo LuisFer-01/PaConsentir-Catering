@@ -13,6 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
 
 class ProductosTable
 {
@@ -35,9 +36,14 @@ class ProductosTable
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('undmedida.nombre')
-                    ->label('Categoria')
+                    ->label('Unidad Medida')
                     ->numeric()
                     ->sortable(),
+                ImageColumn::make('img_ruta')
+                    ->label('Foto')
+                    ->circular()
+                    ->defaultImageUrl(asset('productos/default-producto-01.png'))
+                    ->height(40),
                 IconColumn::make('estado')
                     ->label('Estado')
                     ->boolean(),

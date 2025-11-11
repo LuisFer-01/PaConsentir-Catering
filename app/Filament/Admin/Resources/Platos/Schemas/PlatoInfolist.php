@@ -6,6 +6,8 @@ use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Infolists\Components\ImageEntry;
+use Illuminate\Support\Facades\Storage;
 
 class PlatoInfolist
 {
@@ -26,11 +28,16 @@ class PlatoInfolist
                     ->label('Menu')
                     ->numeric()
                     ->placeholder('-'),
-                ImageColumn::make('img_ruta')
+                ImageEntry::make('img_ruta')
                     ->label('Imagen')
                     ->circular()
-                    ->defaultImageUrl(asset('platos/default-plato-01.png'))
-                    ->height(70)
+                    ->height(120)
+                    ->width(120)
+                    ->defaultImageUrl(asset('platos/default-product-01.png'))
+                    ->url(fn ($record) => $record->img_ruta 
+                        ? Storage::url($record->img_ruta) 
+                        : asset('platos/default-product-01.png')
+                    )
                     ->placeholder('-'),
                 IconEntry::make('estado')
                     ->label('Estado')

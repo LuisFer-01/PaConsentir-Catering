@@ -14,6 +14,7 @@ class PlatoSeeder extends Seeder
             'descripcion' => 'Arroz, carne, caraotas, plátano',
             'precio' => 8.50,
             'menu_id' => 1,
+            'img_ruta' => 'platos/default-plato-01.png',
             'estado' => 1
         ]);
     }
