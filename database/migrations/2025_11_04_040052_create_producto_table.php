@@ -16,6 +16,9 @@ return new class extends Migration
             $table->foreignId('categoria_id')->constrained('categoria', 'id_categoria')->onDelete('restrict');
             $table->foreignId('undmedida_id')->constrained('undmedida', 'id_undmedida')->onDelete('restrict');
             $table->string('img_ruta')->nullable();
+            $table->decimal('cnt_minima', 10, 2)->default(0);
+            $table->decimal('cnt_actual', 10, 2)->default(0);
+            $table->decimal('cnt_maxima', 10, 2)->default(0);
             $table->boolean('estado')->default(1);
             $table->timestamps();
         });

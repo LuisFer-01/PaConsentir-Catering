@@ -46,6 +46,18 @@ class ProductoForm
                     ->imageResizeTargetWidth('300')
                     ->imageResizeTargetHeight('300')
                     ->placeholder('Selecciona una imagen'),
+                TextInput::make('cnt_minima')
+                    ->label('Cantidad Minima')
+                    ->required()
+                    ->numeric(),
+                TextInput::make('cnt_actual')
+                    ->label('Cantidad Actual')
+                    ->required()
+                    ->numeric(),
+                TextInput::make('cnt_maxima')
+                    ->label('Cantidad Maxima')
+                    ->required()
+                    ->numeric(),
                 Toggle::make('estado')
                     ->label('Estado')
                     ->required(),

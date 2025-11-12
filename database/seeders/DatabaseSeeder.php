@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             //PlatoImgSeeder::class,
             ProductoSeeder::class,
             //ProductoImgSeeder::class,
-            StockSeeder::class,
+            //StockSeeder::class,
             RecetaSeeder::class,
             UserSeeder::class,
             HprProductoSeeder::class,

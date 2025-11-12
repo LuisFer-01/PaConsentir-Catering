@@ -16,6 +16,9 @@ class ProductoSeeder extends Seeder
             'categoria_id' => 1,
             'undmedida_id' => 1,
             'img_ruta' => 'productos/default-producto-01.png',
+            'cnt_minima' => 10.00,
+            'cnt_actual' => 50.00,
+            'cnt_maxima' => 200.00,
             'estado' => 1
         ]);
         Producto::create([
@@ -25,6 +28,9 @@ class ProductoSeeder extends Seeder
             'categoria_id' => 2,
             'undmedida_id' => 2,
             'img_ruta' => 'productos/default-producto-01.png',
+            'cnt_minima' => 5.00,
+            'cnt_actual' => 30.00,
+            'cnt_maxima' => 100.00,
             'estado' => 1
         ]);
     }

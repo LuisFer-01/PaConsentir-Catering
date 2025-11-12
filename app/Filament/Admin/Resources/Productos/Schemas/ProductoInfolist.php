@@ -41,6 +41,15 @@ class ProductoInfolist
                         : asset('productos/default-product-01.png')
                     )
                     ->placeholder('-'),
+                TextEntry::make('cnt_minima')
+                    ->label('Cantidad Minima')
+                    ->numeric(),
+                TextEntry::make('cnt_actual')
+                    ->label('Cantidad Actual')
+                    ->numeric(),
+                TextEntry::make('cnt_maxima')
+                    ->label('Cantidad Maxima')
+                    ->numeric(),
                 IconEntry::make('estado')
                     ->label('Estado')
                     ->boolean(),

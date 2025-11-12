@@ -44,6 +44,18 @@ class ProductosTable
                     ->circular()
                     ->defaultImageUrl(asset('productos/default-producto-01.png'))
                     ->height(40),
+                /*TextColumn::make('cnt_minima')
+                    ->label('Cantidad Minima')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('cnt_actual')
+                    ->label('Cantidad Actual')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('cnt_maxima')
+                    ->label('Cantidad Maxima')
+                    ->numeric()
+                    ->sortable(),*/
                 IconColumn::make('estado')
                     ->label('Estado')
                     ->boolean(),

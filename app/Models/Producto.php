@@ -11,16 +11,19 @@ class Producto extends Model
 
     protected $table = 'producto';
     protected $primaryKey = 'id_producto';
-    protected $fillable = ['nombre', 'descripcion', 'precio', 'categoria_id', 'undmedida_id', 'img_ruta', 'estado'];
+    protected $fillable = ['nombre', 'descripcion', 'precio', 'categoria_id', 'undmedida_id', 'img_ruta', 'cnt_minima', 'cnt_actual', 'cnt_maxima', 'estado'];
     protected $casts = [
         'precio' => 'decimal:2',
+        'cnt_minima' => 'decimal:2',
+        'cnt_actual' => 'decimal:2',
+        'cnt_maxima' => 'decimal:2',
         'estado' => 'boolean'
     ];
 
     public function categoria() { return $this->belongsTo(Categoria::class, 'categoria_id', 'id_categoria'); }
     public function undmedida() { return $this->belongsTo(UndMedida::class, 'undmedida_id', 'id_undmedida'); }
     //public function imagenes() { return $this->hasMany(ProductoImg::class, 'producto_id', 'id_producto'); }
-    public function stock() { return $this->hasOne(Stock::class, 'producto_id', 'id_producto'); }
+    //public function stock() { return $this->hasOne(Stock::class, 'producto_id', 'id_producto'); }
     public function recetas() { return $this->hasMany(Receta::class, 'ingrediente_id', 'id_producto'); }
     public function detallesCompra() { return $this->hasMany(DetalleCompra::class, 'producto_id', 'id_producto'); }
     public function detallesVenta() { return $this->hasMany(DetalleVenta::class, 'producto_id', 'id_producto'); }

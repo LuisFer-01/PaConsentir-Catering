@@ -24,7 +24,7 @@ class ProductoResource extends Resource
     use AuthorizesWithPermission;
     protected static ?string $model = Producto::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Sparkles;
 
     public static function getNavigationLabel(): string
     {
