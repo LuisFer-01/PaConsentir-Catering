@@ -14,7 +14,7 @@ return new class extends Migration
             $table->foreignId('usuario_id')->constrained('users')->onDelete('restrict');
             $table->foreignId('tipodocumento_id')->constrained('tipodocumento', 'id_tipodocumento')->onDelete('restrict');
             $table->foreignId('tipopago_id')->constrained('tipopago', 'id_tipopago')->onDelete('restrict');
-            $table->decimal('totalprec', 12, 2);
+            $table->decimal('totalprec', 12, 2)->nullable();
             $table->date('fecha');
             $table->boolean('estado')->default(1); // 1=completado, 0=pendiente/cancelado
             $table->timestamps();

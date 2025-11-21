@@ -24,8 +24,9 @@ class CompraForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
-            ->schema([
+            ->components([
                 Section::make('Información General')
+                    ->columns(2)
                     ->schema([
                         Select::make('proveedor_id')
                             ->relationship('proveedor', 'nombre')
@@ -50,17 +51,6 @@ class CompraForm
                         DatePicker::make('fecha')
                             ->default(now())
                             ->required(),
-                    ])->columns(2),
-
-                Section::make('Total')
-                    ->schema([
-                        Placeholder::make('total_compra')
-                            ->label('Total de la Compra')
-                            ->content(function (Get $get) {
-                                $total = collect($get('detalles'))->sum(fn ($item) => $item['subtotal'] ?? 0);
-                                return 'Bs ' . number_format($total, 2);
-                            })
-                            ->reactive(),
                     ]),
 
                 Section::make('Detalle de Compra')
@@ -91,7 +81,7 @@ class CompraForm
                                     ->default(1)
                                     ->required()
                                     ->reactive()
-                                    ->afterStateUpdated(fn ($state, $get, $set) =>
+                                    ->afterStateUpdated(fn ($state, $get, $set) => 
                                         $set('subtotal', $state * ($get('precio_unitario') ?? 0))
                                     ),
 
@@ -101,7 +91,7 @@ class CompraForm
                                     ->prefix('Bs ')
                                     ->required()
                                     ->reactive()
-                                    ->afterStateUpdated(fn ($state, $get, $set) =>
+                                    ->afterStateUpdated(fn ($state, $get, $set) => 
                                         $set('subtotal', $state * ($get('cantidad') ?? 1))
                                     ),
 
@@ -117,9 +107,29 @@ class CompraForm
                             ->reorderable(false)
                             ->addActionLabel('Agregar producto')
                             ->collapsible()
-                            ->cloneable(),
+                            ->cloneable()
+                            ->afterStateUpdated(fn ($state, $livewire) => 
+                                $livewire->data['totalcost'] = collect($livewire->data['detalles'] ?? [])->sum('subtotal')
+                            )
+                            ->deleteAction(
+                                fn ($action) => $action->after(fn ($livewire) => 
+                                    $livewire->data['totalcost'] = collect($livewire->data['detalles'] ?? [])->sum('subtotal')
+                                )
+                            ),
+                    ]),
+
+                Section::make('Total de la Compra')
+                    ->schema([
+                        TextInput::make('totalcost')
+                            ->label('Total Costo (Bs)')
+                            ->numeric()
+                            ->prefix('Bs ')
+                            ->readOnly()
+                            ->dehydrated(true)
+                            ->default(0)
+                            ->reactive(),
                     ]),
             ])
-            ->columns(2);
+            ->columns(1);
     }
 }
