@@ -1,24 +1,27 @@
 <?php
 
-namespace App\Filament\Admin\Resources\Compras\Tables;
+namespace App\Filament\Admin\Resources\Ventas\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\CreateAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
-class ComprasTable
+class VentasTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('proveedor.nombre')
-                    ->label('Proveedor')
+                TextColumn::make('cliente.nombre')
+                    ->label('Cliente')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('usuario.name')
@@ -33,8 +36,8 @@ class ComprasTable
                     ->label('Tipo Pago')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('totalcost')
-                    ->label('Costo Total')
+                TextColumn::make('totalprec')
+                    ->label('Precio Total')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('fecha')
@@ -56,17 +59,12 @@ class ComprasTable
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                //TrashedFilter::make(),
             ])
             ->recordActions([
                 CreateAction::make(),
                 ViewAction::make(),
                 EditAction::make(),
-            ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
             ]);
     }
 }

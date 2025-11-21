@@ -1,26 +1,23 @@
 <?php
 
-namespace App\Filament\Admin\Resources\Compras\Pages;
+namespace App\Filament\Admin\Resources\Ventas\Pages;
 
-use App\Filament\Admin\Resources\Compras\CompraResource;
+use App\Filament\Admin\Resources\Ventas\VentaResource;
 use Filament\Resources\Pages\CreateRecord;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 
-class CreateCompra extends CreateRecord
+class CreateVenta extends CreateRecord
 {
-    protected static string $resource = CompraResource::class;
-    // Se ejecuta al cargar el formulario
+    protected static string $resource = VentaResource::class;
     public function mount(): void
     {
         $this->form->fill([
             'fecha' => now()->format('Y-m-d'),
             'usuario_id' => auth()->id(),
-            'totalprec' => 0,  // ← Importante: inicializar
+            'totalprec' => 0,
         ]);
     }
 
-    // Calcula el total de los detalles (exactamente como en Compra)
+    // Calcula el total de los detalles
     protected function calculateTotalPrec(): float
     {
         $detalles = $this->data['detalles'] ?? [];
@@ -30,17 +27,12 @@ class CreateCompra extends CreateRecord
         });
     }
 
-    // SE EJECUTA ANTES DE GUARDAR → FORZAMOS EL TOTAL
+    // ANTES DE GUARDAR → forzamos el cálculo
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        // ESTO ES LO QUE FALTABA → calcular y asignar totalprec
-        $data['totalprec'] = $this->calculateTotalPrec();
-
-        // Forzar usuario autenticado
+        $data['totalprec'] = $this->calculateTotalPrec(); // ← ESTO ES LA CLAVE
         $data['usuario_id'] = auth()->id();
-
-        // Estado por defecto: completado
-        $data['estado'] = $data['estado'] ?? 1;
+        $data['estado'] = 1; // completada
 
         return $data;
     }
@@ -52,6 +44,6 @@ class CreateCompra extends CreateRecord
 
     protected function getCreatedNotificationTitle(): ?string
     {
-        return 'Venta creada exitosamente!';
+        return '¡Venta creada exitosamente! Total: Bs ' . number_format($this->calculateTotalPrec(), 2);
     }
 }

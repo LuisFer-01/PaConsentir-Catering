@@ -10,28 +10,23 @@ use Filament\Resources\Pages\EditRecord;
 class EditCompra extends EditRecord
 {
     protected static string $resource = CompraResource::class;
-    protected function calculateTotalCost(): float
+    protected function calculateTotalPrec(): float
     {
         $detalles = $this->data['detalles'] ?? [];
 
-        return collect($detalles)->sum(function ($item) {
-            return ($item['cantidad'] ?? 0) * ($item['precio_unitario'] ?? 0);
-        });
+        return collect($detalles)->sum(fn ($item) => 
+            ($item['cantidad'] ?? 0) * ($item['precio_unitario'] ?? 0)
+        );
     }
 
     protected function mutateFormDataBeforeSave(array $data): array
     {
-        $data['totalcost'] = $this->calculateTotalCost();
+        $data['totalprec'] = $this->calculateTotalPrec();
         return $data;
     }
 
     protected function getSavedNotificationTitle(): ?string
     {
-        return '¡Compra actualizada correctamente!';
-    }
-
-    protected function getRedirectUrl(): string
-    {
-        return $this->getResource()::getUrl('index');
+        return 'Venta actualizada correctamente!';
     }
 }
