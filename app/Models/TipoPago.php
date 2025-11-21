@@ -15,5 +15,5 @@ class TipoPago extends Model
     protected $casts = ['estado' => 'boolean'];
 
     public function compras() { return $this->hasMany(Compra::class, 'tipopago_id', 'id_tipopago'); }
-    public function pagos() { return $this->hasMany(Pago::class, 'tipopago_id', 'id_tipopago'); }
+    public function ventas() { return $this->hasMany(Venta::class, 'tipopago_id', 'id_tipopago'); }
 }

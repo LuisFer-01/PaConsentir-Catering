@@ -3,17 +3,17 @@
 namespace App\Filament\Admin\Resources\Compras\Pages;
 
 use App\Filament\Admin\Resources\Compras\CompraResource;
-use Filament\Actions\CreateAction;
-use Filament\Resources\Pages\ManageRecords;
+use Filament\Actions\EditAction;
+use Filament\Resources\Pages\ViewRecord;
 
-class ManageCompras extends ManageRecords
+class ViewCompra extends ViewRecord
 {
     protected static string $resource = CompraResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            EditAction::make(),
         ];
     }
 }
