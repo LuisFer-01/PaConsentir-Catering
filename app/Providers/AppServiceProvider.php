@@ -7,6 +7,8 @@ use App\Models\Rol;
 use App\Models\Permiso;
 use App\Observers\RolObserver;
 use App\Observers\PermisoObserver;
+use App\Models\DetalleCompra;
+use App\Observers\DetalleCompraObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Rol::observe(RolObserver::class);
         Permiso::observe(PermisoObserver::class);
+        DetalleCompra::observe(DetalleCompraObserver::class);
     }
 }

@@ -18,4 +18,11 @@ class EditCompra extends EditRecord
             DeleteAction::make(),
         ];
     }
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $total = collect($data['detalles'] ?? [])->sum('subtotal');
+        $data['totalcost'] = $total;
+
+        return $data;
+    }
 }

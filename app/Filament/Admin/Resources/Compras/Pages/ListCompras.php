@@ -14,22 +14,60 @@ use Filament\Actions\ViewAction;
 class ListCompras extends ListRecords
 {
     protected static string $resource = CompraResource::class;
+    protected function getHeaderActions(): array
+    {
+        return [
+            CreateAction::make(),
+        ];
+    }
     public function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('proveedor.nombre')->label('Proveedor')->searchable(),
-                TextColumn::make('usuario.name')->label('Registrado por'),
-                TextColumn::make('fecha')->date(),
-                TextColumn::make('totalcost')->money('USD')->sortable(),
+                TextColumn::make('proveedor.nombre')
+                    ->label('Proveedor')
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('usuario.name')
+                    ->label('Registrado por')
+                    ->sortable(),
+
+                TextColumn::make('fecha')
+                    ->date('d M Y')
+                    ->label('Fecha')
+                    ->sortable(),
+
+                TextColumn::make('totalcost')
+                    ->money('USD')
+                    ->label('Total')
+                    ->sortable()
+                    ->alignEnd(),
+
                 BadgeColumn::make('estado')
                     ->label('Estado')
-                    ->colors(['success' => 1, 'danger' => 0])
-                    ->formatStateUsing(fn ($state) => $state ? 'Completada' : 'Cancelada'),
+                    ->colors([
+                        'success' => 1,
+                        'danger' => 0,
+                    ])
+                    ->formatStateUsing(fn ($state) => $state ? 'Completada' : 'Cancelada')
+                    ->icons([
+                        'heroicon-o-check-circle' => 1,
+                        'heroicon-o-x-circle' => 0,
+                    ]),
+            ])
+            ->filters([
+                //
             ])
             ->actions([
                 ViewAction::make(),
-                EditAction::make(),
-            ]);
+                // Actions\EditAction::make(), // ← Comentado porque NO quieres editar compras
+            ])
+            ->bulkActions([
+                // Opcional: eliminar varias
+            ])
+            ->emptyStateHeading('No hay compras registradas')
+            ->emptyStateDescription('Haz clic en "Nueva Compra" para registrar la primera.')
+            ->striped();
     }
 }

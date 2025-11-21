@@ -10,7 +10,7 @@ use App\Filament\Admin\Resources\Compras\Schemas\CompraForm;
 use App\Filament\Admin\Resources\Compras\Schemas\CompraInfolist;
 use App\Filament\Admin\Resources\Compras\Tables\ComprasTable;
 //use App\Filament\Admin\Resources\Compras\RelationManagers\DetalleComprasRelationManager;
-use App\Filament\Admin\Resources\Compras\RelationManagers\DetallesRelationManager;
+//use App\Filament\Admin\Resources\Compras\RelationManagers\DetallesRelationManager;
 use App\Filament\Traits\AuthorizesWithPermission;
 use App\Models\Compra;
 use BackedEnum;
@@ -27,6 +27,19 @@ class CompraResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ShoppingCart;
     protected static ?string $recordTitleAttribute = 'id_compra';
 
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['totalcost'] = collect($data['detalles'] ?? [])->sum('subtotal');
+        $data['usuario_id'] = auth()->id();
+        return $data;
+    }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['totalcost'] = collect($data['detalles'] ?? [])->sum('subtotal');
+        return $data;
+    }
+
     public static function getNavigationLabel(): string
     {
         return 'Gestionar Compra';
@@ -34,7 +47,7 @@ class CompraResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'Gestionar Compras';
+        return 'Gestionar Detalle de Compras';
     }
 
     public static function getModelLabel(): string
@@ -60,7 +73,7 @@ class CompraResource extends Resource
     public static function getRelations(): array
     {
         return [
-            DetallesRelationManager::class,
+            //DetallesRelationManager::class,
         ];
     }
 
@@ -70,7 +83,7 @@ class CompraResource extends Resource
             'index' => ListCompras::route('/'),
             'create' => CreateCompra::route('/create'),
             'view' => ViewCompra::route('/{record}'),
-            'edit' => EditCompra::route('/{record}/edit'),
+            //'edit' => EditCompra::route('/{record}/edit'),
         ];
     }
 

@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             DetalleCompraSeeder::class,
             VentaSeeder::class,
             DetalleVentaSeeder::class,
-            PagoSeeder::class,
+            //PagoSeeder::class,
             InventarioSeeder::class,
             TransaccionSeeder::class,
         ]);
