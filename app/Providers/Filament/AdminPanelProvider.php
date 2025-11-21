@@ -7,6 +7,11 @@ use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Pages\Dashboard;
+use App\Filament\Admin\Pages\ReporteVentas;
+use App\Filament\Admin\Pages\ReporteCompras;
+use App\Filament\Admin\Pages\ReporteInventario;
+use Filament\Navigation\NavigationGroup;
+use Filament\Navigation\NavigationItem;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
@@ -35,6 +40,9 @@ class AdminPanelProvider extends PanelProvider
             ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\Filament\Admin\Pages')
             ->pages([
                 Dashboard::class,
+                ReporteVentas::class,
+                ReporteCompras::class,
+                ReporteInventario::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\Filament\Admin\Widgets')
             ->widgets([
@@ -54,6 +62,22 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->navigationGroups([
+                NavigationGroup::make('REPORTE')
+                    ->items([
+                        NavigationItem::make('Reporte de Ventas')
+                            ->url(fn() => ReporteVentas::getUrl())
+                            ->icon('heroicon-o-document-chart-bar'),
+                        NavigationItem::make('Reporte de Compras')
+                            ->url(fn() => ReporteCompras::getUrl())
+                            ->icon('heroicon-o-shopping-cart'),
+                        NavigationItem::make('Reporte de Inventario')
+                            ->url(fn() => ReporteInventario::getUrl())
+                            ->icon('heroicon-o-archive-box'),
+                    ])
+                    ->collapsible()
+                    ->collapsed(),
             ]);
     }
 }

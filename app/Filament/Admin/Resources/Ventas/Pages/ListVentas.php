@@ -3,9 +3,11 @@
 namespace App\Filament\Admin\Resources\Ventas\Pages;
 
 use App\Filament\Admin\Resources\Ventas\VentaResource;
+use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables\Table;
+//use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Actions\EditAction;
@@ -63,6 +65,12 @@ class ListVentas extends ListRecords
             ->actions([
                 ViewAction::make(),
                 // Actions\EditAction::make(), // ← Comentado porque NO quieres editar ventas
+                Action::make('pdf')
+                    ->label('Factura PDF')
+                    ->icon('heroicon-o-document-text')
+                    ->color('success')
+                    ->url(fn ($record) => route('venta.pdf', $record))
+                    ->openUrlInNewTab(),
             ])
             ->bulkActions([
                 // Opcional: eliminar varias
