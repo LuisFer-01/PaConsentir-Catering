@@ -9,13 +9,18 @@ class ProveedorSeeder extends Seeder
 {
     public function run(): void
     {
-        Proveedor::create([
-            'nombre' => 'Distribuidora El Sabor',
-            'contacto' => 'Juan Pérez',
-            'telefono' => '04141234567',
-            'email' => 'juan@elsabor.com',
-            'direccion' => 'Av. Principal, Valencia',
-            'estado' => 1
-        ]);
+        $proveedores = [
+            'Distribuidora El Sabor', 'Mercado Central', 'AgroInsumos Valencia', 'Lácteos Los Andes', 'Coca Cola Venezuela'
+        ];
+        foreach ($proveedores as $i => $prov) {
+            Proveedor::create([
+                'nombre' => $prov,
+                'contacto' => 'Contacto ' . ($i + 1),
+                'telefono' => '0414' . rand(1000000, 9999999),
+                'email' => strtolower(str_replace(' ', '', $prov)) . '@gmail.com',
+                'direccion' => 'Valencia, Carabobo',
+                'estado' => 1
+            ]);
+        }
     }
 }

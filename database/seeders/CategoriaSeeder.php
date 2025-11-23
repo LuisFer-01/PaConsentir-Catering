@@ -9,8 +9,9 @@ class CategoriaSeeder extends Seeder
 {
     public function run(): void
     {
-        Categoria::create(['nombre' => 'Ingredientes', 'descripcion' => 'Materias primas', 'estado' => 1]);
-        Categoria::create(['nombre' => 'Bebidas', 'descripcion' => 'Refrescos, jugos', 'estado' => 1]);
-        Categoria::create(['nombre' => 'Utensilios', 'descripcion' => 'Platos, vasos', 'estado' => 1]);
+        $categorias = ['Carnes', 'Lácteos', 'Verduras', 'Granos', 'Bebidas', 'Condimentos', 'Utensilios'];
+        foreach ($categorias as $cat) {
+            Categoria::create(['nombre' => $cat, 'descripcion' => "Categoría $cat", 'estado' => 1]);
+        }
     }
 }

@@ -9,14 +9,26 @@ class PlatoSeeder extends Seeder
 {
     public function run(): void
     {
-        Plato::create([
-            'nombre' => 'Pabellón Criollo',
-            'descripcion' => 'Arroz, carne, caraotas, plátano',
-            'precio' => 8.50,
-            'cantidad' => 25,
-            'menu_id' => 1,
-            'img_ruta' => 'platos/default-plato-01.png',
-            'estado' => 1
-        ]);
+        $platos = [
+            ['Majadito Paceño', 12.00, 50],
+            ['Silpancho Cochabambino', 10.50, 40],
+            ['Picante Mixto', 11.00, 35],
+            ['Sopa de Maní', 8.00, 60],
+            ['Chicharrón con Mote', 13.50, 30],
+            ['Saice Tarijeño', 10.00, 45],
+            ['Fricase Paceño', 12.50, 35],
+        ];
+
+        foreach ($platos as $i => $plato) {
+            Plato::create([
+                'nombre' => $plato[0],
+                'descripcion' => "Plato típico boliviano - {$plato[0]}",
+                'precio' => $plato[1],
+                'cantidad' => $plato[2],
+                'menu_id' => 1,
+                'img_ruta' => "platos/plato-" . ($i + 1) . ".png",
+                'estado' => 1
+            ]);
+        }
     }
 }

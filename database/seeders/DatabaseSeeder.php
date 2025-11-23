@@ -30,14 +30,14 @@ class DatabaseSeeder extends Seeder
             //StockSeeder::class,
             RecetaSeeder::class,
             UserSeeder::class,
-            HprProductoSeeder::class,
+            //HprProductoSeeder::class,
             CompraSeeder::class,
-            DetalleCompraSeeder::class,
+            //DetalleCompraSeeder::class,
             VentaSeeder::class,
-            DetalleVentaSeeder::class,
+            //DetalleVentaSeeder::class,
             //PagoSeeder::class,
             InventarioSeeder::class,
-            TransaccionSeeder::class,
+            //TransaccionSeeder::class,
         ]);
     }
 }

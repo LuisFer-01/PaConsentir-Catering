@@ -23,6 +23,14 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use App\Filament\Admin\Widgets\VentasHoyWidget;
+use App\Filament\Admin\Widgets\ComprasHoyWidget;
+use App\Filament\Admin\Widgets\StockCriticoWidget;
+use App\Filament\Admin\Resources\Platos\Widgets\TopPlatosWidget;
+use App\Filament\Admin\Resources\Ventas\Widgets\VentasWidget;
+use App\Filament\Admin\Resources\Compras\Widgets\ComprasWidget;
+use App\Filament\Admin\Widgets\ResumenGeneralWidget;
+use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -32,10 +40,17 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->brandName('Pa\'Consentir')
+            //->brandLogo(public_path('storage/tienda/Logo-Color-PaConsentir.png'))
+            ->brandLogo(fn () => asset('storage/tienda/Logo-Color-PaConsentir.png'))
+            ->brandLogoHeight('6rem')
+            ->favicon(asset('storage/tienda/Logo-Color-PaConsentir.png'))
             ->login()
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->font('Figtree')
+            ->globalSearch(false)
             ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\Filament\Admin\Resources')
             ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\Filament\Admin\Pages')
             ->pages([
@@ -46,9 +61,17 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\Filament\Admin\Widgets')
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                /* AccountWidget::class,
+                FilamentInfoWidget::class, */
+                //ResumenGeneralWidget::class,
+                ComprasHoyWidget::class,
+                VentasHoyWidget::class,
+                StockCriticoWidget::class,
+                TopPlatosWidget::class,
+                VentasWidget::class,
+                ComprasWidget::class,
             ])
+            //->sidebarCollapsibleOnDesktop()
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
@@ -78,6 +101,9 @@ class AdminPanelProvider extends PanelProvider
                     ])
                     ->collapsible()
                     ->collapsed(),
+            ])
+            ->plugins([
+                FilamentApexChartsPlugin::make()
             ]);
     }
 }

@@ -24,8 +24,8 @@
     <div class="container">
 
         <div class="header">
-            @if(file_exists(public_path('storage/logo.png')))
-                <img src="{{ public_path('storage/logo.png') }}" alt="Logo" class="logo">
+            @if(file_exists(public_path('storage/tienda/Logo-Color-PaConsentir.png')))
+                <img src="{{ public_path('storage/tienda/Logo-Color-PaConsentir.png') }}" alt="Logo" class="logo">
             @endif
             <h1>SISTEMA Pa'Consentir</h1>
             <p>Catering & Eventos</p>

@@ -9,8 +9,9 @@ class UndMedidaSeeder extends Seeder
 {
     public function run(): void
     {
-        UndMedida::create(['nombre' => 'Kilogramo', 'descripcion' => 'kg', 'estado' => 1]);
-        UndMedida::create(['nombre' => 'Litro', 'descripcion' => 'L', 'estado' => 1]);
-        UndMedida::create(['nombre' => 'Unidad', 'descripcion' => 'und', 'estado' => 1]);
+        $unidades = ['Kilogramo', 'Litro', 'Unidad', 'Paquete', 'Caja', 'Bolsa'];
+        foreach ($unidades as $und) {
+            UndMedida::create(['nombre' => $und, 'descripcion' => substr($und, 0, 3), 'estado' => 1]);
+        }
     }
 }
